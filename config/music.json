@@ -1,0 +1,397 @@
+{
+  "schema": 1,
+  "mobs": [
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-UndergroundCave_Engage.Mus_GamePlay_XiGu-UndergroundCave_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0ZKZPHNHEJKG1NBEE1S2BSSTR.umap#PBZMusicVolume_UAID_849E56D5E58C27BD02_1474255787"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-DesertedVillage_Engage.Mus_GamePlay_XiGu-DesertedVillage_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0ZKZPHNHEJKG1NBEE1S2BSSTR.umap#PBZMusicVolume_UAID_849E56D5E58C27BD02_1474255787"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-Ice_Engage.Mus_GamePlay_FuJiZhiLin-Ice_Engage",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/9KKIFS2DICDZH1D20L521OPQY.umap#PBZMusicVolume_UAID_BCFCE7B969DEB7AE02_2113814000"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-Ice_Engage.Mus_GamePlay_PangZhen-Ice_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/8OOVU3FOGIKULX2N99L1JQRRM.umap#PBZMusicVolume_UAID_BCFCE70789A034EE02_2043289012"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-CampDefense_Engage.Mus_GamePlay_ZhengDaoDaYing-CampDefense_Engage",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/7LSSTC6JXIZDEB9X4DSANRJ9F.umap#PBZMusicVolume_UAID_BCFCE70789A03DE802_1918729376"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-DH_Part2_Engage.Mus_GamePlay_DuanHun-DH_Part2_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/659HU865SCAIJBU377ZPQLGX9.umap#PBZMusicVolume_UAID_BCFCE70789A04AF202_1234561089"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-IceCave_Engage.Mus_GamePlay_DuanHun-IceCave_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/659HU865SCAIJBU377ZPQLGX9.umap#PBZMusicVolume_UAID_BCFCE70789A072F402_2122126251"
+    },
+    {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_HSSYJ.Mus_GamePlay_HSSYJ",
+      "state": "/Game/Wwise/States/Mus/Mus_Gameplay_HSSYJ/Mus_Gameplay_HSSYJ-HSSYJ_Engage.Mus_Gameplay_HSSYJ-HSSYJ_Engage",
+      "source": "ProjectPBZ/Content/Maps/HuanShuShiYiJi/PBZ_Huanshuyiji2_WP/_Generated_/DAWVABEQ54DCYGZBAVMMC9IZK.umap#PBZMusicVolume_UAID_BCFCE70789A03AEE02_1568028115"
+    }
+  ],
+  "bosses": {
+    "mob_man_elite_sword": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-EliteMonster_Engage.Mus_GamePlay_XiGu-EliteMonster_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/6MPC7V6TSWSHLS1YO6BSID4NK.umap#PBZMusicVolume_UAID_BCFCE7B969DEC3A702_1433131509"
+    },
+    "peng_meng_axe": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-PengMeng_Engage.Mus_GamePlay_XiGu-PengMeng_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0ZKZPHNHEJKG1NBEE1S2BSSTR.umap#PBZMusicVolume_UAID_74563CB5C562F96202_1109230604"
+    },
+    "hook_man": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-GouZhe_Engage.Mus_GamePlay_XiGu-GouZhe_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/DVZEU5NWHBG4T6LNNNWFRCIJ8.umap#PBZMusicVolume_UAID_74563CB5C562948902_2139848233"
+    },
+    "hook_man_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-GouZhe_P2_Engage.Mus_GamePlay_XiGu-GouZhe_P2_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/DVZEU5NWHBG4T6LNNNWFRCIJ8.umap#PBZMusicVolume_UAID_74563CB5C562948902_2139848233"
+    },
+    "ahua_gui_tou_dao": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-GhostBride_Engage.Mus_GamePlay_XiGu-GhostBride_Engage",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/355VAZIJZPPU57AUWVB3H2EFG.umap#PBZMusicVolume_UAID_74563CB5C5624E5D02_2070139417"
+    },
+    "scavenger": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-QingDaoFu.Mus_GamePlay_XiGu-QingDaoFu",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/5JK5RA2RNNBMKLUP498OBZEI3.umap#PBZMusicVolume_UAID_BCFCE70789A02CE302_1525705979"
+    },
+    "mo_tian": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiGu.Mus_GamePlay_XiGu",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiGu/Mus_GamePlay_XiGu-MoYuan_P1.Mus_GamePlay_XiGu-MoYuan_P1",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0EY6PDD5NR3SSZ3EUIM8NDP5V.umap#PBZMusicVolume_UAID_849E56D5E58C02C502_423d05e8b5826f73_1685595675"
+    },
+    "yu_cong_first_time": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-HunDun_P1.Mus_GamePlay_FuJiZhiLin-HunDun_P1",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0IBU79B3T4B3OPSUGNFNDUXCE.umap#PBZMusicVolume_UAID_BCFCE70789A0C6F502_1695163096"
+    },
+    "hua_qian_xiao": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-DrunkSword.Mus_GamePlay_FuJiZhiLin-DrunkSword",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/33Y5EII17A7RXRELF9833EBJ9.umap#PBZMusicVolume_UAID_74563CB5C562119202_1229459856"
+    },
+    "luan_shi": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-Jingye_TieKuang.Mus_GamePlay_FuJiZhiLin-Jingye_TieKuang",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/EU4N75P2H6ZKQQA0AKZ7MGSRQ.umap#PBZMusicVolume_UAID_60CF848A6689336302_1404502639"
+    },
+    "jing_ye": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-Jingye_TieKuang.Mus_GamePlay_FuJiZhiLin-Jingye_TieKuang",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/EU4N75P2H6ZKQQA0AKZ7MGSRQ.umap#PBZMusicVolume_UAID_60CF848A6689336302_1404502639"
+    },
+    "chi_lian": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-SnakebattleP1.Mus_GamePlay_FuJiZhiLin-SnakebattleP1",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/3KAMT30U6RTJEPKH45ANL2TAR.umap#PBZMusicVolume_UAID_74563CB5C562129202_1746865239"
+    },
+    "yuu": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-YuYaoTieGui_Engage.Mus_GamePlay_FuJiZhiLin-YuYaoTieGui_Engage",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/02KPGIC50C54WDV81PNVVQO1P.umap#PBZMusicVolume_UAID_BCFCE70789A030EE02_1406152298"
+    },
+    "tie_gui": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-YuYaoTieGui_Engage.Mus_GamePlay_FuJiZhiLin-YuYaoTieGui_Engage",
+      "source": "ProjectPBZ/Content/Maps/B03/PBZ_Fujizhilin_WP/_Generated_/02KPGIC50C54WDV81PNVVQO1P.umap#PBZMusicVolume_UAID_BCFCE70789A030EE02_1406152298"
+    },
+    "zhuobi": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-ZhuoBi.Mus_GamePlay_LuJiaCun-ZhuoBi",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/7TH9KK6B7JNCP7OEZ6QHM9LMC.umap#PBZMusicVolume_UAID_849E56D5E58C2FBE02_1305124030"
+    },
+    "female_vessel_yu_zan": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-Yuzan.Mus_GamePlay_LuJiaCun-Yuzan",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/5KGIJMNNX41NM5KIJ0GML9VZ3.umap#PBZMusicVolume_UAID_BCFCE7B969DEE8AB02_1426694156"
+    },
+    "mu_xiao_kui": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MuXiaoKui_P1.Mus_GamePlay_LuJiaCun-MuXiaoKui_P1",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/E3CLYPPWFA9JZ3CCYZCTTKVDY.umap#PBZMusicVolume_UAID_74563CB5C562244E02_2087643529"
+    },
+    "mu_xiao_kui_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MuXiaoKui_P2.Mus_GamePlay_LuJiaCun-MuXiaoKui_P2",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/E3CLYPPWFA9JZ3CCYZCTTKVDY.umap#PBZMusicVolume_UAID_74563CB5C562244E02_2087643529"
+    },
+    "gui_chai_red": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-HuoLiuXing_P1.Mus_GamePlay_PangZhen-HuoLiuXing_P1",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/6539QF9Y07B6SPO6TM5NXODX7.umap#PBZMusicVolume_UAID_BCFCE7B969DE30B202_1578952003"
+    },
+    "gui_chai_red_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-HuoLiuXing_P2.Mus_GamePlay_PangZhen-HuoLiuXing_P2",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/6539QF9Y07B6SPO6TM5NXODX7.umap#PBZMusicVolume_UAID_BCFCE7B969DE30B202_1578952003"
+    },
+    "gui_chai_yellow_mo_dao": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-GuiChaiElite_Engage.Mus_GamePlay_PangZhen-GuiChaiElite_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/C6FGUDP1BV88FK9O95QH41NBY.umap#PBZMusicVolume_UAID_74563CC79730DD7902_1321052916"
+    },
+    "gui_chai_yellow_shuang_gou": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-GuiChaiElite_Engage.Mus_GamePlay_PangZhen-GuiChaiElite_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/C6FGUDP1BV88FK9O95QH41NBY.umap#PBZMusicVolume_UAID_74563CC79730DD7902_1321052916"
+    },
+    "huo_dao_dui_zhang": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-WuXuan_Engage.Mus_GamePlay_PangZhen-WuXuan_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/D5FMZZYOBBVSWDF2S96DOI8TM.umap#PBZMusicVolume_UAID_849E56D5E58CA4E602_1278100259"
+    },
+    "wu_xuan": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-WuXuan_Engage.Mus_GamePlay_PangZhen-WuXuan_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/D5FMZZYOBBVSWDF2S96DOI8TM.umap#PBZMusicVolume_UAID_849E56D5E58CA4E602_1278100259"
+    },
+    "gu_wan_yue": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-GuWanYue_Engage.Mus_GamePlay_PangZhen-GuWanYue_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/7CEB47IIYJER7ALI1LBTDLTPD.umap#PBZMusicVolume_UAID_60CF848A668932B202_1377480348"
+    },
+    "you_long_second_brother": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-YouLongBang_Engage.Mus_GamePlay_PangZhen-YouLongBang_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/DRAL9XPB82OSVFO0ZH3SOPML0.umap#PBZMusicVolume_UAID_60CF848A668932B202_1377478345"
+    },
+    "chang_hong_spear": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-ChangHong_P1.Mus_GamePlay_PangZhen-ChangHong_P1",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/13I4T438JE84ICU2C99E2O2JR.umap#PBZMusicVolume_UAID_849E56D5E58C30CE02_1373863491"
+    },
+    "chang_hong_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-ChangHong_P2.Mus_GamePlay_PangZhen-ChangHong_P2",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/13I4T438JE84ICU2C99E2O2JR.umap#PBZMusicVolume_UAID_849E56D5E58C30CE02_1373863491"
+    },
+    "lion_dancer": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-WuShi_P1.Mus_GamePlay_PangZhen-WuShi_P1",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/AIVAG4N2O1EJREBYF4EK20MJ8.umap#PBZMusicVolume_UAID_60CF848A668932B202_1377480349"
+    },
+    "lion_dancer_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-WuShi_P2.Mus_GamePlay_PangZhen-WuShi_P2",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/AIVAG4N2O1EJREBYF4EK20MJ8.umap#PBZMusicVolume_UAID_60CF848A668932B202_1377480349"
+    },
+    "hua_shan_red_troop_big_bro": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-XueJianke_Engage.Mus_GamePlay_PangZhen-XueJianke_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/6H42ZVDXWGXLS873DO3VXZUUZ.umap#PBZMusicVolume_UAID_BCFCE70789A0D7E702_2017184310"
+    },
+    "du_yan_boss": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-DuYan_Engage.Mus_GamePlay_PangZhen-DuYan_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/6YM2LPXT9YCGUTS1ZAFXALJHG.umap#PBZMusicVolume_UAID_BCFCE70789A0A7D502_1191435844"
+    },
+    "you_long_harpoon": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-YouLongBang_Engage.Mus_GamePlay_PangZhen-YouLongBang_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/DRAL9XPB82OSVFO0ZH3SOPML0.umap#PBZMusicVolume_UAID_60CF848A668932B202_1377478345"
+    },
+    "yan_qian_sui": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-YanQianSui_Engage.Mus_GamePlay_PangZhen-YanQianSui_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/370GQGJ0Q5TGA9M6FYRTNY2JS.umap#PBZMusicVolume_UAID_BCFCE7B969DE4EB502_1768387391"
+    },
+    "feng_xue_dao_ke": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_PangZhen.Mus_GamePlay_PangZhen",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_PangZhen/Mus_GamePlay_PangZhen-FengXueDaoKe_Engage.Mus_GamePlay_PangZhen-FengXueDaoKe_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_10/PBZ_Pangzhen_WP/_Generated_/E3HY6UOMAUER7ERNUVD3WJ2K5.umap#PBZMusicVolume_UAID_BCFCE70789A07DEE02_1424645030"
+    },
+    "maddoctor_elite": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-Doctor.Mus_GamePlay_ZhengDaoDaYing-Doctor",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/B6J67ALJB1C8ELHNKTJKA1NC6.umap#PBZMusicVolume_UAID_74563CB5C562507702_1158313800"
+    },
+    "xiaoxue": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-XiaoXue_Engage.Mus_GamePlay_ZhengDaoDaYing-XiaoXue_Engage",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/2SMV5N9TMDT7PJ00JCOBTQDIE.umap#PBZMusicVolume_UAID_74563CB5C562785F02_1985623678"
+    },
+    "wan_jun_jin_gua": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-WanJun.Mus_GamePlay_ZhengDaoDaYing-WanJun",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/3VMLILHFCAORO26MWP9Z5H59O.umap#PBZMusicVolume_UAID_74563CB5C5626C5F02_1341500381"
+    },
+    "emei_sword_top": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-NvJianKe.Mus_GamePlay_ZhengDaoDaYing-NvJianKe",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/0V4WPSN75I50BPS2RCDXWI82A.umap#PBZMusicVolume_UAID_74563CB5C562894302_1426447472"
+    },
+    "hua_shan_blue": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-JianOu_P1.Mus_GamePlay_ZhengDaoDaYing-JianOu_P1",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/CM4NNIFXILG3FGHF720TTXZUY.umap#PBZMusicVolume_UAID_74563CC79730D96502_1681904742"
+    },
+    "hua_shan_jian_ou": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-JianOu_P2.Mus_GamePlay_ZhengDaoDaYing-JianOu_P2",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/CM4NNIFXILG3FGHF720TTXZUY.umap#PBZMusicVolume_UAID_74563CC79730D96502_1681904742"
+    },
+    "wu_leng_shuang": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-WuLengShuang.Mus_GamePlay_ZhengDaoDaYing-WuLengShuang",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/9YKNC3FWQS4UR3RBO33INGI6S.umap#PBZMusicVolume_UAID_74563CB5C562795F02_1458968855"
+    },
+    "yu_bi": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_ZhengDaoDaYing.Mus_GamePlay_ZhengDaoDaYing",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_ZhengDaoDaYing/Mus_GamePlay_ZhengDaoDaYing-YuBi.Mus_GamePlay_ZhengDaoDaYing-YuBi",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/28TCJJ6KOLKLZKEAG1T1F7QWB.umap#PBZMusicVolume_UAID_BCFCE70789A09FE102_1457877202"
+    },
+    "mob_man_elite": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Monster_Elite.Mus_GamePlay-Monster_Elite",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/5DGL69S3OIGGAOMB80LU2RLYC.umap#PBZMusicVolume_UAID_74563CC57EE2693A02_1903743336"
+    },
+    "great_blade": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Boss_Small.Mus_GamePlay-Boss_Small",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/BKTQSHEXQO052G3U20ZWHQT2L.umap#PBZMusicVolume_UAID_74563CC57EE2693A02_1908544377"
+    },
+    "yanyan": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Monster_Elite.Mus_GamePlay-Monster_Elite",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/5DGL69S3OIGGAOMB80LU2RLYC.umap#PBZMusicVolume_UAID_74563CC57EE2693A02_1903743336"
+    },
+    "jade_mask_man": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Boss_Middle.Mus_GamePlay-Boss_Middle",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/1C0BSAD9GYQIW5YIF6EC5LMPS.umap#PBZMusicVolume_UAID_74563CC57EE2693A02_1904365686"
+    },
+    "mboss": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Boss_Big.Mus_GamePlay-Boss_Big",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/1C0BSAD9GYQIW5YIF6EC5LMPS.umap#PBZMusicVolume_UAID_74563CC57EE2693A02_1904365686"
+    },
+    "mboss_variants": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_VS2.Mus_GamePlay_VS2",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay/Mus_GamePlay-Boss_Big_P2.Mus_GamePlay-Boss_Big_P2",
+      "source": "ProjectPBZ/Content/Maps/DengDingShanDao/PBZ_DengDingShanDao_WP/_Generated_/908HLXT0RIBVQ4BFSC0779JK1.umap#PBZMusicVolume_UAID_BCFCE7B969DECAB202_1152029043"
+    },
+    "gui_chai_cyan_shuang_yue": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiMengShanZhuang.Mus_GamePlay_XiMengShanZhuang",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiMengShanZhuang/Mus_GamePlay_XiMengShanZhuang-GuiChaiElite_Engage.Mus_GamePlay_XiMengShanZhuang-GuiChaiElite_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Ximeng_WP/_Generated_/BGEQTKDXTHQW7IO8FVRPQO6M1.umap#PBZMusicVolume_UAID_BCFCE70789A073DF02_1418780248"
+    },
+    "female_vessel_yu_ding": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiMengShanZhuang.Mus_GamePlay_XiMengShanZhuang",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiMengShanZhuang/Mus_GamePlay_XiMengShanZhuang-YuDing_Engage.Mus_GamePlay_XiMengShanZhuang-YuDing_Engage",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Ximeng_WP/_Generated_/0TCBAXKYUMHTSD5FK8RFX0JMG.umap#PBZMusicVolume_UAID_849E56D5E58C1CEA02_1481916602"
+    },
+    "lei_dang": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiMengShanZhuang.Mus_GamePlay_XiMengShanZhuang",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiMengShanZhuang/Mus_GamePlay_XiMengShanZhuang-LeiDang_P1.Mus_GamePlay_XiMengShanZhuang-LeiDang_P1",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Ximeng_WP/_Generated_/AZAL4SAEA7EG408CRVDDKNEHX.umap#PBZMusicVolume_UAID_849E56D5E58CC4E902_1805164086"
+    },
+    "lei_dang_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_XiMengShanZhuang.Mus_GamePlay_XiMengShanZhuang",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_XiMengShanZhuang/Mus_GamePlay_XiMengShanZhuang-LeiDang_P2.Mus_GamePlay_XiMengShanZhuang-LeiDang_P2",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Ximeng_WP/_Generated_/AZAL4SAEA7EG408CRVDDKNEHX.umap#PBZMusicVolume_UAID_849E56D5E58CC4E902_1805164086"
+    },
+    "power_man": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-LiJu_P1.Mus_GamePlay_DuanHun-LiJu_P1",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/7TC9S4OLE9CRSS67WVXRCIM7B.umap#PBZMusicVolume_UAID_BCFCE70789A003F702_1813628980"
+    },
+    "power_man_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-LiJu_P2.Mus_GamePlay_DuanHun-LiJu_P2",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/7TC9S4OLE9CRSS67WVXRCIM7B.umap#PBZMusicVolume_UAID_BCFCE70789A003F702_1813628980"
+    },
+    "meng_hua": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-MengHua.Mus_GamePlay_DuanHun-MengHua",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/EBA027AD8DZ3DCRC6L0G3FBX5.umap#PBZMusicVolume_UAID_849E56D5E58C66E902_1262135507"
+    },
+    "zuo_shang_ending": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-ZuoShang_P1.Mus_GamePlay_DuanHun-ZuoShang_P1",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/5DD6QK1G3HA2SA374YZAKZM50.umap#PBZMusicVolume_UAID_849E56D5E58C70E902_1894644297"
+    },
+    "zuo_shang_p2": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_DuanHun.Mus_GamePlay_DuanHun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_DuanHun/Mus_GamePlay_DuanHun-ZuoShang_P2.Mus_GamePlay_DuanHun-ZuoShang_P2",
+      "source": "ProjectPBZ/Content/Maps/B08_09_12_13/PBZ_Duanhun_WP/_Generated_/5DD6QK1G3HA2SA374YZAKZM50.umap#PBZMusicVolume_UAID_849E56D5E58C70E902_1894644297"
+    },
+    "can_qu_bi_hai": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-Lament_01_Engage.Mus_GamePlay_LuJiaCun-Lament_01_Engage",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/3N0QZ6UJH7ZVDW0AXD97VJEU8.umap#PBZMusicVolume_UAID_BCFCE7B969DEE4AB02_1213321047"
+    },
+    "bi_yuan": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-Lament_02_Engage.Mus_GamePlay_LuJiaCun-Lament_02_Engage",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/3YQFRVYUYY2XX8S3YJDBGIMK1.umap#PBZMusicVolume_UAID_DC567B5284E035BE02_2030519180"
+    },
+    "danghui": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-DangHui.Mus_GamePlay_LuJiaCun-DangHui",
+      "source": "ProjectPBZ/Content/Maps/B04_05/PBZ_Zhengdaodaying_WP/_Generated_/DPVCK6DERSYE2R5O3TA91SOEL.umap#PBZMusicVolume_UAID_BCFCE7B969DECDAE02_1305287127"
+    },
+    "qi_shu_bing": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MieFaBoss_Engage.Mus_GamePlay_LuJiaCun-MieFaBoss_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/5TDV3P26TERF4QMTCT678RCYA.umap#PBZMusicVolume_UAID_60CF848A69CDEFE702_1129523564"
+    },
+    "qi_shu_huo": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MieFaBoss_Engage.Mus_GamePlay_LuJiaCun-MieFaBoss_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/5TDV3P26TERF4QMTCT678RCYA.umap#PBZMusicVolume_UAID_60CF848A69CDEFE702_1129523564"
+    },
+    "qi_shu_lei": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MieFaBoss_Engage.Mus_GamePlay_LuJiaCun-MieFaBoss_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/5TDV3P26TERF4QMTCT678RCYA.umap#PBZMusicVolume_UAID_60CF848A69CDEFE702_1129523564"
+    },
+    "qi_shu_du": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_LuJiaCun.Mus_GamePlay_LuJiaCun",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_LuJiaCun/Mus_GamePlay_LuJiaCun-MieFaBoss_Engage.Mus_GamePlay_LuJiaCun-MieFaBoss_Engage",
+      "source": "ProjectPBZ/Content/Maps/B09/PBZ_Houjie_WP/_Generated_/5TDV3P26TERF4QMTCT678RCYA.umap#PBZMusicVolume_UAID_60CF848A69CDEFE702_1129523564"
+    },
+    "yu_cong_p1": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-HunDun_P1.Mus_GamePlay_FuJiZhiLin-HunDun_P1",
+      "source": "ProjectPBZ/Content/Maps/B02/PBZ_Xigu_WP/_Generated_/0IBU79B3T4B3OPSUGNFNDUXCE.umap#PBZMusicVolume_UAID_BCFCE70789A0C6F502_1695163096"
+    },
+    "yu_cong_wu_li": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-HunDun_P3.Mus_GamePlay_FuJiZhiLin-HunDun_P3",
+      "source": "ProjectPBZ/Content/PBZContent/Sequencer/GenerateSequencer/Seqs030/Seqs/Seqs030_Sound.uasset#PlayMusicAndSetStateWithDelay"
+    },
+    "yu_cong_bing": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-HunDun_P3.Mus_GamePlay_FuJiZhiLin-HunDun_P3",
+      "source": "ProjectPBZ/Content/PBZContent/Sequencer/GenerateSequencer/Seqs030/Seqs/Seqs030_Sound.uasset#PlayMusicAndSetStateWithDelay"
+    },
+    "yu_cong_hun_dun": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_FuJiZhiLin.Mus_GamePlay_FuJiZhiLin",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_FuJiZhiLin/Mus_GamePlay_FuJiZhiLin-HunDun_P3.Mus_GamePlay_FuJiZhiLin-HunDun_P3",
+      "source": "ProjectPBZ/Content/PBZContent/Sequencer/GenerateSequencer/Seqs030/Seqs/Seqs030_Sound.uasset#PlayMusicAndSetStateWithDelay"
+    },
+    "zuo_shang": {
+      "event": "/Game/Wwise/Events/Mus/Mus_GamePlay/Mus_GamePlay_Prologue.Mus_GamePlay_Prologue",
+      "state": "/Game/Wwise/States/Mus/Mus_GamePlay_Prologue/Mus_GamePlay_Prologue-Duel_Engage_01.Mus_GamePlay_Prologue-Duel_Engage_01",
+      "source": "ProjectPBZ/Content/Maps/B01/PBZ_WP_ZhuLinGuWu/_Generated_/CTW8WP4FMHEEZ1DR3AAQMRH1S.umap#PBZMusicVolume_UAID_74563CB5C562D88A02_1305758242"
+    }
+  }
+}

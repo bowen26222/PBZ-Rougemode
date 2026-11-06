@@ -1,0 +1,111 @@
+{
+  "exeSHA256": "4415933ce33476f14c837abb61a1b60af8b78cd81783896501913a7aac69e423",
+  "manifestRva": 200036592,
+  "records": [
+    {
+      "path": "project/ui/widget/deadmenu.js",
+      "rawLength": 30321,
+      "wrappedLength": 30387,
+      "rawSHA256": "2342c4ef0f7d9adefc8621d702b65f9714205c850c6f4154d0552414faaeb1d9",
+      "wrappedSHA256": "f950673d682305a37bbbef4b84775a2d800e38535af794dde01f1b1f28ebdd3a"
+    },
+    {
+      "path": "project/flownode/playcomplextutorialnode.js",
+      "rawLength": 8502,
+      "wrappedLength": 8568,
+      "rawSHA256": "57bc36666cd2515fb88e1dfd8de28a46aca79a0a02abeb4e64c71795bb010fe5",
+      "wrappedSHA256": "b2978f59234b4bc36a38d6f9be0d96b1d9e6eb953592b07c65a9af84cf678084"
+    },
+    {
+      "path": "project/gameplay/renewalplayer.js",
+      "rawLength": 61111,
+      "wrappedLength": 61177,
+      "rawSHA256": "b3831d68bc4978001cf3a891a1512d1b408bd7d11e054349ec01db0ff4a008f5",
+      "wrappedSHA256": "fdced6257b3e7f8686687a496a8f311851528c0769c188aa17d4940bcfc77a99"
+    },
+    {
+      "path": "project/level/actor/switch/melodiousbell.js",
+      "rawLength": 862,
+      "wrappedLength": 928,
+      "rawSHA256": "ef721d6d4639ee22820a9664cd18370dad6e690b3c0067056f2b358d82496bf1",
+      "wrappedSHA256": "a84cb926e49b32abd27df2e2548c86cc1d2851cab58cfb59c634077fea9fdcb1"
+    },
+    {
+      "path": "project/system/tutorialhint_doublemedicine.js",
+      "rawLength": 6763,
+      "wrappedLength": 6829,
+      "rawSHA256": "ce3ad00ea6fb1758230a5829c224479065caa63ac99dbd455e15f18dd660d6ad",
+      "wrappedSHA256": "09f259c1a93ca289334f16febcb7beea2de70f4d942b747b9c4ad1348cd0bc56"
+    },
+    {
+      "path": "project/system/tutorialhint_potion.js",
+      "rawLength": 31105,
+      "wrappedLength": 31171,
+      "rawSHA256": "2ab689cab748bff91c2f91ee84d270ffcfc134f09cbb1badf264765dae3fcc31",
+      "wrappedSHA256": "e71f3f92c24219c343863af168bee1574f761fba79ab650a36fe510c8df99e34"
+    },
+    {
+      "path": "project/system/tutorialhint_ultimate.js",
+      "rawLength": 12772,
+      "wrappedLength": 12838,
+      "rawSHA256": "e1cba8287e16294d98903db17ee5fe71eec20c7200e35b4cab1d76420844d1d8",
+      "wrappedSHA256": "16811640f54302598bf3ac18508414e53c5521069f6c22a4a78f285da08e526d"
+    },
+    {
+      "path": "project/system/tutorialhint_weaponswitch.js",
+      "rawLength": 18529,
+      "wrappedLength": 18595,
+      "rawSHA256": "a6fb34829d530fb1d4647d2d585470354a4d61b2edbfbc0e315f916d4e05ac56",
+      "wrappedSHA256": "04f9dadb726b883d77eeeb5715e3b6440bb866274bc928ffdb05fdd081068ea4"
+    },
+    {
+      "path": "project/ui/widget/abilitywidget.js",
+      "rawLength": 253547,
+      "wrappedLength": 253613,
+      "rawSHA256": "805dee1b74d00cc8738bdc4ddfa045a9f72c32da3a22dd0843bab793b37690b4",
+      "wrappedSHA256": "c84fe57724ea78c17143aabd2780de468d05108d9043e3f1146975c355dac963"
+    },
+    {
+      "path": "project/ui/widget/bellmenu.js",
+      "rawLength": 67704,
+      "wrappedLength": 67770,
+      "rawSHA256": "34b7bb9eee0c729f8e81e961d8ac8606c4f11dcac938846e914a66f51b7b5c7a",
+      "wrappedSHA256": "67d1413d7c3bd67498da4401a7472380da0567a5fdc83dd3e4945961671f7174"
+    },
+    {
+      "path": "project/ui/widget/entitlementnotify.js",
+      "rawLength": 20264,
+      "wrappedLength": 20330,
+      "rawSHA256": "c928cc11e0c8f923af2554ea46131aff579630391e0875371fa31b30d879ab13",
+      "wrappedSHA256": "a757bba54da75102d30da87ec1cde509533ac2e611cb77c83072007dadf0dbd0"
+    },
+    {
+      "path": "project/ui/widget/firstlaunchsettingsflow.js",
+      "rawLength": 1822,
+      "wrappedLength": 1888,
+      "rawSHA256": "8e855ecbb71d06d9e59b8476e2e5110cd9d233359166fe0bb4cefca3c61ab98c",
+      "wrappedSHA256": "994839f3cff270e44dab7442b128000b41ebcb3259a4d16f5b54ec74e3d91f21"
+    },
+    {
+      "path": "project/ui/widget/startmenu.js",
+      "rawLength": 100831,
+      "wrappedLength": 100897,
+      "rawSHA256": "1b76d61e28a654a4bb22f0ac476b4ec624a321e0a6d748ad7ef8192919485080",
+      "wrappedSHA256": "997bb11f07f68a858d6205a58327e0dd5d864aec0be04e37f67831b1aa718797"
+    },
+    {
+      "path": "project/ui/widget/systembase.js",
+      "rawLength": 82449,
+      "wrappedLength": 82515,
+      "rawSHA256": "60fcbd08fc0594177c18aec4447d489179b146ec73e813a2e0007b32834d5d7c",
+      "wrappedSHA256": "925b8f9be2bd9f746defa10a63fdde7ab0762fb3d4bd2ccd0caee446b96bb93a"
+    },
+    {
+      "path": "project/ui/widget/tutorialcomplex.js",
+      "rawLength": 11576,
+      "wrappedLength": 11642,
+      "rawSHA256": "c1bfa6beccb01482f2bccfa7811b5af5f5795f069316ee35ecd103d9df465428",
+      "wrappedSHA256": "b4ad2df7123e985a43cca51ed1bd14427c03d819dcf450dbe8bfa8abf4717a5d"
+    }
+  ]
+}

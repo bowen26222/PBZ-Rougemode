@@ -1,0 +1,61 @@
+{
+  "arena": {
+    "map": "/Game/Maps/B02/PBZ_Xigu_WP",
+    "policy": "/Game/PBZContent/Blueprint/DT_NormalGamePolicy.DT_NormalGamePolicy",
+    "center": {
+      "X": 3376.328,
+      "Y": 287351.298,
+      "Z": 1999548.2
+    },
+    "camera": {
+      "Pitch": -10,
+      "Yaw": -113.591234,
+      "Roll": 0
+    },
+    "cinematicFlows": [
+      "/Game/PBZContent/Blueprint/FlowGraph/QuestFlowGraph/XiMengShanZhuang/BPF_Seqs027_MoOuChuChang.BPF_Seqs027_MoOuChuChang"
+    ],
+    "spawnRadius": 1000,
+    "minimumPlayerDistance": 500,
+    "minimumEnemyDistance": 220,
+    "boundaryRadius": 5000,
+    "stairWall": {
+      "start": {
+        "X": 1419.091,
+        "Y": 291117.7
+      },
+      "finish": {
+        "X": 6804.822,
+        "Y": 288327.421
+      },
+      "baseZ": 1999306.1,
+      "height": 2400,
+      "depth": 500,
+      "thickness": 120
+    }
+  },
+  "level": {
+    "first": 2,
+    "perFloor": 2
+  },
+  "clearReward": 0,
+  "waveDelaySeconds": 3,
+  "readyDelaySeconds": 3,
+  "waves": [
+    {
+      "pool": "mobs",
+      "minimum": 3,
+      "maximum": 4
+    },
+    {
+      "pool": "mobs",
+      "minimum": 4,
+      "maximum": 5
+    },
+    {
+      "pool": "bosses",
+      "minimum": 1,
+      "maximum": 1
+    }
+  ]
+}

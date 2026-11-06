@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\..\.local\NativeAssetReader\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)..\..\.local\NativeAssetReader\bin\</BaseOutputPath>
+  </PropertyGroup>
+</Project>

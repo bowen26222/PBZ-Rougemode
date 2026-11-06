@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无尽修炼 · GM 控制台</title>
+<style>
+:root {
+  --bg: #0e1113;
+  --panel: #151a1d;
+  --panel-2: #101518;
+  --line: #262d31;
+  --text: #e7e2d8;
+  --muted: #939da3;
+  --accent: #c9a86a;
+  --accent-dim: #6f5c34;
+  --ok: #74bd93;
+  --danger: #d76a5f;
+  --input: #0b0f11;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 20% -10%, #1c2226 0%, var(--bg) 55%);
+  color: var(--text);
+  font: 14px/1.6 "Microsoft YaHei UI", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+  min-height: 100vh;
+}
+header.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 22px 32px 18px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(14, 17, 19, .86);
+  backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 5;
+}
+.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand svg { flex: 0 0 auto; }
+h1 {
+  margin: 0; font-size: 19px; font-weight: 600; letter-spacing: .12em;
+  white-space: nowrap;
+}
+h1 span { color: var(--accent); font-weight: 500; letter-spacing: .06em; }
+.brand p { margin: 2px 0 0; color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.chip {
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px;
+  font-size: 12px; color: var(--muted); background: var(--panel-2); white-space: nowrap;
+}
+.chip strong { color: var(--text); font-weight: 600; }
+.chip.ok { border-color: #2c5140; color: var(--ok); }
+.chip.off { opacity: .75; }
+main {
+  display: grid; grid-template-columns: minmax(620px, 1.45fr) minmax(330px, .85fr);
+  gap: 20px; padding: 24px 32px 48px; max-width: 1560px; margin: 0 auto;
+}
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,.018), transparent 120px), var(--panel);
+  border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px 22px;
+}
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+.card-head h2 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: .1em; }
+.card-head .tools { display: flex; gap: 6px; }
+h3 { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: .08em; color: var(--accent); }
+.hint { color: var(--muted); font-size: 12px; }
+.field { display: flex; align-items: center; gap: 12px; margin: 16px 0 6px; }
+.field label { width: 52px; color: var(--muted); font-size: 13px; }
+input, select, button { font: inherit; color: var(--text); }
+select { background: var(--input); border: 1px solid #2b3338; border-radius: 6px; padding: 7px 9px; }
+input[type=number], input[type=text] {
+  background: var(--input); border: 1px solid #2b3338; border-radius: 6px;
+  padding: 7px 9px; outline: none; transition: border-color .15s ease;
+}
+input:focus { border-color: var(--accent-dim); }
+input[type=number] { width: 84px; }
+#floor { width: 96px; font-variant-numeric: tabular-nums; }
+button {
+  background: #1b2227; border: 1px solid #313a40; border-radius: 6px;
+  padding: 7px 13px; cursor: pointer; transition: border-color .15s ease, background .15s ease;
+  font-size: 13px;
+}
+button:hover { border-color: #46525a; background: #202930; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.primary {
+  background: linear-gradient(180deg, #c9a86a, #ad8b4f); color: #17130b;
+  border-color: #d8bb83; font-weight: 700; letter-spacing: .06em; padding: 9px 22px;
+}
+button.primary:hover { background: linear-gradient(180deg, #d8ba7d, #b8965a); }
+button.ghost { background: transparent; }
+section.wave-block { margin-top: 18px; }
+.wave-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+.wave-head .count { color: var(--muted); font-size: 12px; margin-left: auto; font-variant-numeric: tabular-nums; }
+.rows { display: flex; flex-direction: column; gap: 7px; }
+.enemy-row {
+  display: grid; grid-template-columns: minmax(220px, 1fr) 76px 30px; gap: 8px; align-items: center;
+}
+.enemy-field { position: relative; display: flex; flex-direction: column; }
+.enemy-field input { width: 100%; }
+.resolved { min-height: 15px; font-size: 11px; color: var(--muted); padding-left: 2px; }
+.resolved.warn { color: #d8a24e; }
+.resolved.bad { color: var(--danger); }
+.remove {
+  background: transparent; border-color: transparent; color: var(--muted);
+  padding: 4px; font-size: 15px; line-height: 1;
+}
+.remove:hover { color: var(--danger); border-color: transparent; background: transparent; }
+.add-row { margin-top: 7px; align-self: flex-start; }
+.shop-grid { display: grid; grid-template-columns: repeat(3, minmax(150px, 1fr)); gap: 14px; margin-top: 10px; }
+.shop-col { border: 1px solid #232a2e; border-radius: 8px; padding: 12px 13px; background: var(--panel-2); }
+.shop-col h4 { margin: 0 0 9px; font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .06em; }
+.weight-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 5px 0; }
+.weight-row span { font-size: 12.5px; color: #c8cfd3; }
+.weight-row input { width: 64px; padding: 4px 7px; text-align: right; font-variant-numeric: tabular-nums; }
+.shop-note { margin-top: 9px; }
+.actions { display: flex; align-items: center; gap: 10px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+.actions .spacer { flex: 1; }
+#form-message { min-height: 20px; font-size: 12.5px; margin-top: 10px; }
+#form-message.ok { color: var(--ok); }
+#form-message.bad { color: var(--danger); }
+.live dl { display: grid; grid-template-columns: 92px 1fr; gap: 6px 10px; margin: 0; }
+.live dt { color: var(--muted); font-size: 12.5px; }
+.live dd { margin: 0; font-size: 13px; font-variant-numeric: tabular-nums; }
+.live .section { margin-top: 20px; }
+.status-message {
+  border: 1px solid var(--line); border-radius: 7px; padding: 9px 11px;
+  background: var(--panel-2); font-size: 12.5px; color: var(--muted); margin-top: 10px;
+  word-break: break-all;
+}
+.status-message.ok { border-color: #2c5140; color: var(--ok); }
+.status-message.bad { border-color: #5b2f2b; color: var(--danger); }
+.control-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+.control-row label { flex: 1 0 100px; color: var(--muted); font-size: 12.5px; }
+.control-row input[type=number] { width: 110px; }
+.equipment-fields { border: 0; padding: 0; margin: 0; min-width: 0; }
+.equipment-fields:disabled { opacity: .55; }
+.equipment-field { display: grid; gap: 5px; min-width: 0; margin: 10px 0; }
+.equipment-field label, .equipment-soul { color: var(--muted); font-size: 12.5px; }
+.equipment-field input, .equipment-field select { width: 100%; min-width: 0; max-width: 100%; }
+.equipment-soul { display: flex; align-items: center; gap: 8px; margin: 10px 0; }
+.equipment-soul[hidden] { display: none; }
+#equipment-slot-summary { overflow-wrap: anywhere; }
+pre.log {
+  margin: 0; padding: 11px 12px; background: #090c0e; border: 1px solid #1f262a;
+  border-radius: 7px; font: 11.5px/1.55 Consolas, "Cascadia Mono", monospace;
+  color: #9fb1a8; max-height: 260px; overflow: auto; white-space: pre-wrap; word-break: break-all;
+}
+footer { color: #5f6a70; font-size: 11.5px; padding: 0 32px 28px; max-width: 1560px; margin: 0 auto; }
+footer code { color: #87949a; }
+@media (max-width: 1100px) {
+  main { grid-template-columns: 1fr; padding: 18px 16px 40px; }
+  header.top { padding: 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .enemy-row { grid-template-columns: minmax(150px, 1fr) 70px 28px; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+      <circle cx="17" cy="17" r="15.2" stroke="#c9a86a" stroke-opacity=".55"/>
+      <path d="M9 21.5c4.2-7.4 8.1-9.6 15.7-9.4-3.6 1.5-5.9 3.9-7.3 7.6-2 1.2-4.8 1.8-8.4 1.8Z" fill="#c9a86a" fill-opacity=".82"/>
+      <circle cx="17" cy="17" r="2" fill="#0e1113"/>
+    </svg>
+    <div>
+      <h1>无尽修炼 <span>GM 控制台</span></h1>
+      <p>局内调试 · 手动安排层数、小怪、Boss 与商店 · 不重置当前角色</p>
+    </div>
+  </div>
+  <div class="chips" id="chips">
+    <span class="chip off">等待连接…</span>
+  </div>
+</header>
+
+<main>
+  <section class="card form">
+    <div class="card-head">
+      <h2>自定义楼层</h2>
+      <div class="tools">
+        <button id="use-current" class="ghost" type="button">填入当前层数</button>
+        <button id="reset-form" class="ghost" type="button">重置表单</button>
+      </div>
+    </div>
+    <p class="hint">发送后立即替换当前波次：清空场上敌人，按所选起始阶段进入自定义楼层。生命、魂、装备、技能和存档保持原样；商店模式直接展示本层权重下的随机商品。</p>
+
+    <div class="field">
+      <label for="floor">层数</label>
+      <input id="floor" type="number" min="1" max="999" step="1" value="1">
+      <span class="hint">1–999；敌人等级、商店价格和商店档位按该层计算。</span>
+    </div>
+
+    <div class="field">
+      <label for="start">起始</label>
+      <select id="start">
+        <option value="wave1">第 1 波小怪</option>
+        <option value="wave2">第 2 波小怪</option>
+        <option value="boss">Boss 波</option>
+        <option value="shop">直接打开商店</option>
+      </select>
+      <span class="hint">用于单独核对某一波；商店模式不需要先清怪。</span>
+    </div>
+
+    <div class="waves" id="waves"></div>
+
+    <section class="wave-block">
+      <div class="wave-head">
+        <h3 style="margin:0;color:var(--text)">Boss 波</h3>
+        <span class="count" data-count="boss">共 1 只</span>
+      </div>
+      <div class="rows" id="boss-rows"></div>
+      <button class="add-row ghost" type="button" data-add="boss">＋ 添加 Boss</button>
+    </section>
+
+    <section class="wave-block">
+      <div class="wave-head">
+        <h3 style="margin:0;color:var(--text)">本层商店权重</h3>
+        <span class="count">0 = 不出现；留空商店仍保留四项固定服务</span>
+      </div>
+      <div class="shop-grid" id="shop-grid"></div>
+      <p class="hint shop-note">只影响该 GM 楼层的随机商品生成；离开本层后恢复 config/shop.json 的默认权重。</p>
+    </section>
+
+    <div class="actions">
+      <button id="load" class="primary" type="button">加载到游戏</button>
+      <button id="launch" type="button">启动游戏</button>
+      <span class="spacer"></span>
+      <button id="refresh" class="ghost" type="button">刷新状态</button>
+    </div>
+    <div id="form-message" role="status"></div>
+  </section>
+
+  <aside class="card live">
+    <div class="card-head"><h2>实机状态</h2></div>
+    <dl>
+      <dt>游戏进程</dt><dd id="s-game">—</dd>
+      <dt>独立存档</dt><dd id="s-profile">—</dd>
+      <dt>阶段</dt><dd id="s-phase">—</dd>
+      <dt>楼层 / 波次</dt><dd id="s-floor">—</dd>
+      <dt>生命</dt><dd id="s-health">—</dd>
+      <dt>基础生命上限</dt><dd id="s-max-health-base">—</dd>
+      <dt>基础攻击力</dt><dd id="s-attack-base">—</dd>
+      <dt>实际攻击力</dt><dd id="s-attack">—</dd>
+      <dt>锁血</dt><dd id="s-lock-health">—</dd>
+      <dt>杀气 / 上限</dt><dd id="s-shachi">—</dd>
+      <dt>魂</dt><dd id="s-balance">—</dd>
+      <dt>GM 楼层</dt><dd id="s-gm">—</dd>
+      <dt>上次命令</dt><dd id="s-command">—</dd>
+    </dl>
+    <div id="s-message" class="status-message">尚未发送 GM 指令。</div>
+    <section class="section" id="character-controls">
+      <h3>角色控制</h3>
+      <p class="hint">每次仅修改所选项目，不加载楼层。基础属性受装备和增益影响，实际值以上方实机状态为准。</p>
+      <div class="control-row">
+        <label for="control-health">当前生命</label>
+        <input id="control-health" type="number" min="1" max="1000000" step="any" data-control="health">
+        <button type="button" data-apply-control="health">应用</button>
+      </div>
+      <div class="control-row">
+        <label for="control-maxHealth">基础生命上限</label>
+        <input id="control-maxHealth" type="number" min="1" max="1000000" step="any" data-control="maxHealth">
+        <button type="button" data-apply-control="maxHealth">应用</button>
+      </div>
+      <div class="control-row">
+        <label for="control-attack">基础攻击力</label>
+        <input id="control-attack" type="number" min="1" max="1000000" step="any" data-control="attack">
+        <button type="button" data-apply-control="attack">应用</button>
+      </div>
+      <div class="control-row">
+        <span>无限攻击力</span>
+        <span class="hint">基础攻击设为 100 万</span>
+        <button id="infinite-attack" type="button" data-apply-control="attack" data-value="1000000">开启</button>
+      </div>
+      <div class="control-row">
+        <label for="control-lockHealth">锁血</label>
+        <input id="control-lockHealth" type="checkbox" data-control="lockHealth">
+        <button type="button" data-apply-control="lockHealth">应用</button>
+      </div>
+      <div class="control-row">
+        <label for="control-shachi">杀气值</label>
+        <input id="control-shachi" type="number" min="0" max="1000000" step="any" data-control="shachi">
+        <button type="button" data-apply-control="shachi">应用</button>
+      </div>
+      <p class="hint">当前生命：1 至当前有效生命上限，最多 1000000；基础生命上限 / 基础攻击力：1–1000000；杀气值：0 至当前有效杀气上限，最多 1000000。“无限攻击力”直接设为 100 万，不使用 Infinity；需要恢复时，在基础攻击力栏输入原值并应用。锁血阻止角色受到伤害，不是定时回血。</p>
+      <div id="controls-message" class="status-message" role="status">修改后点击对应的“应用”。</div>
+    </section>
+    <section class="section" id="equipment-controls">
+      <h3>直接替换装备</h3>
+      <p class="hint">不扣钱，仅替换指定槽位，保留其他装备与资源。槽位从 1 开始；可修改当前同一物品的等级或取消铸魂。已在其他同类槽位装备的物品会被拒绝，不会自动移动。</p>
+      <fieldset id="equipment-fields" class="equipment-fields" disabled>
+        <div class="equipment-field">
+          <label for="equipment-kind">种类</label>
+          <select id="equipment-kind">
+            <option value="weapons">武器</option>
+            <option value="shadow">影之武装（Phantom Edges）</option>
+            <option value="accessory">饰品</option>
+            <option value="medicine">药品</option>
+          </select>
+        </div>
+        <div class="equipment-field">
+          <label for="equipment-search">搜索物品名称 / ID</label>
+          <input id="equipment-search" type="text" placeholder="输入名称或 ID 筛选下方目录" autocomplete="off">
+          <label for="equipment-item">选择物品</label>
+          <select id="equipment-item"><option value="">等待游戏装备目录…</option></select>
+        </div>
+        <div class="equipment-field">
+          <label for="equipment-level">精确原生等级</label>
+          <input id="equipment-level" type="number" step="1" aria-describedby="equipment-level-range" disabled>
+          <span id="equipment-level-range" class="hint">选择物品后显示原生等级范围。</span>
+        </div>
+        <label id="equipment-soul-row" class="equipment-soul" hidden>
+          <input id="equipment-soul" type="checkbox">铸魂（取消勾选将清除铸魂）
+        </label>
+        <div class="equipment-field">
+          <label for="equipment-slot">目标槽位（从 1 开始）</label>
+          <select id="equipment-slot" aria-describedby="equipment-slot-summary"><option value="">等待可用槽位…</option></select>
+          <span id="equipment-slot-summary" class="hint">请选择要替换的槽位。</span>
+        </div>
+        <button id="equipment-replace" type="button" disabled>替换装备（不扣钱）</button>
+      </fieldset>
+      <p id="equipment-availability" class="hint">等待最新游戏装备状态…</p>
+      <div id="equipment-message" class="status-message" role="status">选择物品、精确等级和目标槽位后替换。</div>
+    </section>
+    <div class="section">
+      <h3>游戏日志</h3>
+      <pre class="log" id="s-log">等待 [PBZRogue] 日志…</pre>
+    </div>
+  </aside>
+</main>
+
+<footer>本机工具，仅监听 <code>127.0.0.1</code>；指令通过独立存档目录内的 JSON 文件交给游戏。</footer>
+
+<datalist id="mob-list"></datalist>
+<datalist id="boss-list"></datalist>
+
+<script>
+"use strict";
+const $ = (selector, root) => (root || document).querySelector(selector);
+const PHASES = {
+  menu: "主菜单", loading: "加载中", ready: "准备", rest: "休整", bell: "铃铛",
+  shop: "商店", skills: "技能树", between: "波次间", combat: "战斗",
+  checkpoint: "存档", dying: "濒死", ended: "结束", failed: "失败"
+};
+const SHOP_LABELS = [
+  ["weapons", "武器", [["upgrade", "升级"], ["replace", "替换"], ["soul", "铸魂"]]],
+  ["shadow", "影之武装", [["upgrade", "升级"], ["replace", "替换"], ["soul", "铸魂"]]],
+  ["supplies", "饰品 / 药品", [["accessory_replace", "饰品替换"], ["medicine_replace", "药品替换"], ["accessory_upgrade", "饰品升级"], ["medicine_upgrade", "药品升级"]]]
+];
+const DRAFT_KEY = "pbz-gm-draft-v1";
+
+const app = {
+  catalog: null,
+  mobMap: new Map(),
+  bossMap: new Map(),
+  polling: false,
+  lastPhase: null,
+  equipment: {
+    profile: null, profileName: null, data: null, updated: null, receivedAt: 0, running: false,
+    command: null, request: null, catalogKey: null, slotsKey: null
+  }
+};
+
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function formatNumber(value) {
+  return typeof value === "number" && Number.isFinite(value)
+    ? new Intl.NumberFormat("zh-CN").format(Math.round(value))
+    : "—";
+}
+
+function showFormMessage(text, kind) {
+  const node = $("#form-message");
+  node.textContent = text || "";
+  node.className = kind || "";
+}
+
+function buildCatalogIndex() {
+  app.mobMap = new Map(app.catalog.mobs.map((enemy) => [enemy.id, enemy]));
+  app.bossMap = new Map(app.catalog.bosses.map((enemy) => [enemy.id, enemy]));
+  const mobList = $("#mob-list");
+  const bossList = $("#boss-list");
+  mobList.replaceChildren();
+  bossList.replaceChildren();
+  const fill = (list, enemies) => {
+    for (const enemy of enemies) {
+      const option = document.createElement("option");
+      option.value = enemy.id;
+      const text = `${enemy.name}${enemy.tier ? " · " + enemy.tier : ""}${enemy.enabled ? "" : " · 未启用"}`;
+      option.label = text;
+      option.textContent = text;
+      list.appendChild(option);
+    }
+  };
+  fill(mobList, app.catalog.mobs);
+  fill(bossList, app.catalog.bosses);
+}
+
+function resolveEnemy(input, pool) {
+  const raw = (input.value || "").trim();
+  if (!raw) return { error: "请选择敌人" };
+  const map = pool === "bosses" ? app.bossMap : app.mobMap;
+  const enemies = pool === "bosses" ? app.catalog.bosses : app.catalog.mobs;
+  let enemy = map.get(raw);
+  if (!enemy) {
+    const matches = enemies.filter((candidate) => candidate.name === raw);
+    if (matches.length === 1) enemy = matches[0];
+  }
+  if (!enemy) return { error: "未知敌人：" + raw };
+  input.value = enemy.id;
+  return { enemy };
+}
+
+function renderResolved(row, pool) {
+  const input = $(".enemy-id", row);
+  const label = $(".resolved", row);
+  const raw = (input.value || "").trim();
+  if (!raw) {
+    label.textContent = "";
+    label.className = "resolved";
+    return;
+  }
+  const map = pool === "bosses" ? app.bossMap : app.mobMap;
+  const enemies = pool === "bosses" ? app.catalog.bosses : app.catalog.mobs;
+  let enemy = map.get(raw);
+  if (!enemy) {
+    const matches = enemies.filter((candidate) => candidate.name === raw);
+    if (matches.length === 1) enemy = matches[0];
+  }
+  if (!enemy) {
+    label.textContent = "未识别的敌人，请从列表选择";
+    label.className = "resolved bad";
+    return;
+  }
+  const disabled = enemy.enabled === false;
+  label.textContent = (disabled ? "⚠ 未启用：" : "") + (enemy.reason || `${enemy.name}${enemy.tier ? " · " + enemy.tier : ""} · 第 ${enemy.firstFloor} 层起`);
+  label.className = "resolved" + (disabled ? " warn" : "");
+}
+
+function enemyRow(pool, data) {
+  const row = el("div", "enemy-row");
+  const field = el("div", "enemy-field");
+  const input = el("input");
+  input.type = "text";
+  input.className = "enemy-id";
+  input.placeholder = "搜索名称或填写 ID";
+  input.autocomplete = "off";
+  input.setAttribute("list", pool === "bosses" ? "boss-list" : "mob-list");
+  if (data && data.id) input.value = data.id;
+  const resolved = el("span", "resolved");
+  field.append(input, resolved);
+  const count = el("input", "enemy-count");
+  count.type = "number";
+  count.min = "1";
+  count.max = "8";
+  count.step = "1";
+  count.value = data && data.count ? data.count : 1;
+  const remove = el("button", "remove", "×");
+  remove.type = "button";
+  remove.title = "移除";
+  remove.addEventListener("click", () => {
+    const container = row.parentElement;
+    if (container.children.length === 1) {
+      input.value = "";
+      count.value = 1;
+    } else {
+      row.remove();
+    }
+    updateWaveCounts();
+    saveDraft();
+  });
+  row.append(field, count, remove);
+  input.addEventListener("input", () => { renderResolved(row, pool); updateWaveCounts(); saveDraft(); });
+  input.addEventListener("change", () => {
+    const result = resolveEnemy(input, pool);
+    if (result.enemy) {
+      input.value = result.enemy.id;
+      renderResolved(row, pool);
+      saveDraft();
+    }
+  });
+  count.addEventListener("input", () => { updateWaveCounts(); saveDraft(); });
+  renderResolved(row, pool);
+  return row;
+}
+
+function buildWaveEditors() {
+  const waves = $("#waves");
+  waves.replaceChildren();
+  for (let index = 0; index < 2; index += 1) {
+    const block = el("section", "wave-block");
+    block.dataset.wave = String(index + 1);
+    const head = el("div", "wave-head");
+    head.append(el("h3", null, `第 ${index + 1} 波小怪`), el("span", "count"));
+    const rows = el("div", "rows");
+    const add = el("button", "add-row ghost", "＋ 添加敌人");
+    add.type = "button";
+    add.addEventListener("click", () => {
+      rows.appendChild(enemyRow("mobs", null));
+      updateWaveCounts();
+      saveDraft();
+    });
+    block.append(head, rows, add);
+    waves.appendChild(block);
+  }
+  const bossRows = $("#boss-rows");
+  bossRows.replaceChildren();
+  document.querySelectorAll("[data-add='boss']").forEach((button) => {
+    button.addEventListener("click", () => {
+      bossRows.appendChild(enemyRow("bosses", null));
+      updateWaveCounts();
+      saveDraft();
+    });
+  });
+}
+
+function buildShopEditors() {
+  const grid = $("#shop-grid");
+  grid.replaceChildren();
+  for (const [section, title, keys] of SHOP_LABELS) {
+    const column = el("div", "shop-col");
+    column.appendChild(el("h4", null, title));
+    for (const [key, label] of keys) {
+      const row = el("label", "weight-row");
+      const span = el("span", null, label);
+      const input = el("input");
+      input.type = "number";
+      input.min = "0";
+      input.max = "100";
+      input.step = "1";
+      input.dataset.section = section;
+      input.dataset.key = key;
+      input.value = "0";
+      input.addEventListener("input", saveDraft);
+      row.append(span, input);
+      column.appendChild(row);
+    }
+    grid.appendChild(column);
+  }
+}
+
+function setShopWeights(weights) {
+  if (!weights) return;
+  for (const input of document.querySelectorAll(".shop-col input[data-section]")) {
+    const section = input.dataset.section;
+    const key = input.dataset.key;
+    const source = weights[section] || {};
+    if (typeof source[key] === "number") input.value = String(source[key]);
+  }
+}
+
+function defaultScenario() {
+  const mob = app.catalog.mobs.find((enemy) => enemy.enabled !== false && enemy.firstFloor === 1) || app.catalog.mobs[0];
+  const second = app.catalog.mobs.find((enemy) => enemy.enabled !== false && enemy.firstFloor === 1 && enemy.id !== mob.id) || mob;
+  const boss = app.catalog.bosses.find((enemy) => enemy.enabled !== false && enemy.firstFloor === 1) || app.catalog.bosses[0];
+  return {
+    floor: 1,
+    start: "wave1",
+    waves: [[{ id: mob.id, count: 3 }], [{ id: second.id, count: 4 }]],
+    boss: [{ id: boss.id, count: 1 }],
+    shop: app.catalog.shop.weights
+  };
+}
+
+function applyDraft(draft) {
+  $("#floor").value = String(draft.floor || 1);
+  $("#start").value = draft.start || "wave1";
+  const waveBlocks = document.querySelectorAll("#waves .wave-block");
+  draft.waves.forEach((rowsData, index) => {
+    const rows = $(".rows", waveBlocks[index]);
+    rows.replaceChildren();
+    const list = Array.isArray(rowsData) && rowsData.length ? rowsData : [{ id: "", count: 1 }];
+    for (const data of list) rows.appendChild(enemyRow("mobs", data));
+  });
+  const bossRows = $("#boss-rows");
+  bossRows.replaceChildren();
+  const bossList = Array.isArray(draft.boss) && draft.boss.length ? draft.boss : [{ id: "", count: 1 }];
+  for (const data of bossList) bossRows.appendChild(enemyRow("bosses", data));
+  if (draft.shop) setShopWeights(draft.shop);
+  updateWaveCounts();
+}
+
+function collectScenario() {
+  const floor = Number($("#floor").value);
+  if (!Number.isInteger(floor) || floor < 1 || floor > 999) {
+    return { error: "层数需要 1–999 的整数" };
+  }
+  const waves = [];
+  const waveBlocks = document.querySelectorAll("#waves .wave-block");
+  for (let index = 0; index < waveBlocks.length; index += 1) {
+    const rows = waveBlocks[index].querySelectorAll(".enemy-row");
+    const enemies = [];
+    let total = 0;
+    for (const row of rows) {
+      const input = $(".enemy-id", row);
+      if (!input.value.trim()) continue;
+      const result = resolveEnemy(input, "mobs");
+      if (result.error) return { error: `第 ${index + 1} 波：${result.error}` };
+      const count = Number($(".enemy-count", row).value);
+      if (!Number.isInteger(count) || count < 1 || count > app.catalog.limits.count) {
+        return { error: `第 ${index + 1} 波数量需要 1–${app.catalog.limits.count}` };
+      }
+      enemies.push({ id: result.enemy.id, count });
+      total += count;
+    }
+    if (!enemies.length) return { error: `第 ${index + 1} 波至少需要一个敌人` };
+    if (total > app.catalog.limits.wave) return { error: `第 ${index + 1} 波最多 ${app.catalog.limits.wave} 个敌人` };
+    waves.push({ enemies });
+  }
+  const bosses = [];
+  let bossTotal = 0;
+  for (const row of document.querySelectorAll("#boss-rows .enemy-row")) {
+    const input = $(".enemy-id", row);
+    if (!input.value.trim()) continue;
+    const result = resolveEnemy(input, "bosses");
+    if (result.error) return { error: "Boss：" + result.error };
+    const count = Number($(".enemy-count", row).value);
+    if (!Number.isInteger(count) || count < 1 || count > app.catalog.limits.count) {
+      return { error: `Boss 数量需要 1–${app.catalog.limits.count}` };
+    }
+    bosses.push({ id: result.enemy.id, count });
+    bossTotal += count;
+  }
+  if (!bosses.length) return { error: "Boss 波至少需要一个 Boss" };
+  if (bossTotal > app.catalog.limits.boss) return { error: `Boss 波最多 ${app.catalog.limits.boss} 个` };
+
+  const shop = {};
+  for (const input of document.querySelectorAll(".shop-col input[data-section]")) {
+    const value = Number(input.value);
+    if (!Number.isInteger(value) || value < 0 || value > 100) {
+      return { error: "商店权重需要 0–100 的整数" };
+    }
+    const section = input.dataset.section;
+    shop[section] = shop[section] || {};
+    shop[section][input.dataset.key] = value;
+  }
+  const totalWeight = Object.values(shop).reduce((sum, section) => sum + Object.values(section).reduce((a, b) => a + b, 0), 0);
+  return {
+    floor,
+    start: $("#start").value,
+    mobs: waves,
+    boss: { enemies: bosses },
+    shop: { weights: shop },
+    allZero: totalWeight === 0
+  };
+}
+
+function updateWaveCounts() {
+  const waveBlocks = document.querySelectorAll("#waves .wave-block");
+  waveBlocks.forEach((block) => {
+    let total = 0;
+    for (const row of block.querySelectorAll(".enemy-row")) {
+      const count = Number($(".enemy-count", row).value);
+      if (Number.isInteger(count) && count > 0) total += count;
+    }
+    const label = $(".count", block);
+    if (label) label.textContent = `共 ${total} 只`;
+  });
+  let bossTotal = 0;
+  for (const row of document.querySelectorAll("#boss-rows .enemy-row")) {
+    const count = Number($(".enemy-count", row).value);
+    if (Number.isInteger(count) && count > 0) bossTotal += count;
+  }
+  const bossLabel = document.querySelector("[data-count='boss']");
+  if (bossLabel) bossLabel.textContent = `共 ${bossTotal} 只`;
+}
+
+function saveDraft() {
+  if (!app.catalog) return;
+  const draft = collectDraft();
+  if (draft) localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+}
+
+function collectDraft() {
+  const floor = Number($("#floor").value) || 1;
+  const waves = [];
+  for (const block of document.querySelectorAll("#waves .wave-block")) {
+    const rows = [];
+    for (const row of block.querySelectorAll(".enemy-row")) {
+      rows.push({ id: $(".enemy-id", row).value.trim(), count: Number($(".enemy-count", row).value) || 1 });
+    }
+    waves.push(rows);
+  }
+  const boss = [];
+  for (const row of document.querySelectorAll("#boss-rows .enemy-row")) {
+    boss.push({ id: $(".enemy-id", row).value.trim(), count: Number($(".enemy-count", row).value) || 1 });
+  }
+  const shop = {};
+  for (const input of document.querySelectorAll(".shop-col input[data-section]")) {
+    shop[input.dataset.section] = shop[input.dataset.section] || {};
+    shop[input.dataset.section][input.dataset.key] = Number(input.value) || 0;
+  }
+  return { floor, start: $("#start").value, waves, boss, shop };
+}
+
+async function fetchJson(url, options) {
+  const response = await fetch(url, options);
+  let payload = null;
+  try { payload = await response.json(); } catch (error) { payload = null; }
+  if (!response.ok) {
+    const message = payload && payload.error ? payload.error : `请求失败（HTTP ${response.status}）`;
+    throw new Error(message);
+  }
+  return payload;
+}
+
+async function applyControl(button) {
+  const key = button.dataset.applyControl;
+  const input = $(`#control-${key}`);
+  if (button.dataset.value !== undefined) {
+    input.value = button.dataset.value;
+    input.dataset.dirty = "true";
+  }
+  const message = $("#controls-message");
+  const toggle = input.type === "checkbox";
+  const value = toggle ? input.checked : Number(input.value);
+  const minimum = key === "shachi" ? 0 : 1;
+  const maximum = key === "health" ? app.lastGm && app.lastGm.maxHealth
+    : key === "shachi" ? app.lastGm && app.lastGm.shachiMax : 1000000;
+  if (!toggle && (!input.value.trim() || !Number.isFinite(value) || value < minimum ||
+      !Number.isFinite(maximum) || value > maximum || value > 1000000)) {
+    message.textContent = key === "health"
+      ? "当前生命必须为 1 至当前有效生命上限之间的数值，且不能超过 1000000；请先等待实机状态更新。"
+      : key === "shachi" ? "杀气值必须为 0 至当前有效杀气上限之间的数值，且不能超过 1000000；请先等待实机状态更新。"
+      : "请输入 1–1000000 之间的有限数值。";
+    message.className = "status-message bad";
+    return;
+  }
+  button.disabled = true;
+  try {
+    const result = await fetchJson("/api/controls", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ controls: { [key]: value } })
+    });
+    app.controlCommand = { seq: result.seq, key, value };
+    message.textContent = `角色命令 #${result.seq} 已发送，等待游戏处理…`;
+    message.className = "status-message";
+    setTimeout(refreshState, 400);
+  } catch (error) {
+    message.textContent = error.message;
+    message.className = "status-message bad";
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function renderControls(gm, profile) {
+  app.lastGm = gm;
+  const pending = app.controlCommand;
+  if (pending && gm && gm.appliedSeq >= pending.seq) {
+    const message = $("#controls-message");
+    const matched = gm.appliedSeq === pending.seq;
+    message.textContent = matched ? `#${pending.seq}：${gm.message || (gm.ok === false ? "应用失败" : "已应用")}`
+      : `命令 #${pending.seq} 已被后续命令覆盖，请核对实机状态。`;
+    message.className = "status-message " + (matched && gm.ok !== false ? "ok" : "bad");
+    const input = $(`#control-${pending.key}`);
+    const current = input.type === "checkbox" ? input.checked : Number(input.value);
+    if (matched && gm.ok !== false && current === pending.value) delete input.dataset.dirty;
+    app.controlCommand = null;
+  } else if (pending && profile && profile.command && profile.command.seq > pending.seq) {
+    $("#controls-message").textContent = `命令 #${pending.seq} 已被后续命令替换，请核对实机状态。`;
+    $("#controls-message").className = "status-message bad";
+    app.controlCommand = null;
+  }
+  for (const input of document.querySelectorAll("[data-control]")) {
+    if (document.activeElement === input || input.dataset.dirty) continue;
+    const key = input.dataset.control;
+    const field = { attack: "attackBase", maxHealth: "maxHealthBase" }[key] || key;
+    const value = gm && gm[field];
+    if (input.type === "checkbox") {
+      input.checked = value === true;
+    } else {
+      input.value = Number.isFinite(value) ? String(value) : "";
+    }
+  }
+}
+
+function equipmentMessage(text, kind) {
+  $("#equipment-message").textContent = text;
+  $("#equipment-message").className = "status-message" + (kind ? " " + kind : "");
+}
+
+function equipmentItems() {
+  const data = app.equipment.data;
+  const items = data && data.catalog && data.catalog[$("#equipment-kind").value];
+  return Array.isArray(items) ? items : [];
+}
+
+function equipmentSlots() {
+  const data = app.equipment.data;
+  return data && Array.isArray(data.slots)
+    ? data.slots.filter((slot) => slot.kind === $("#equipment-kind").value) : [];
+}
+
+function selectedEquipmentItem() {
+  return equipmentItems().find((item) => item.id === $("#equipment-item").value);
+}
+
+function equipmentLive() {
+  const state = app.equipment;
+  const age = Date.now() / 1000 - state.updated;
+  return Boolean(state.profile && state.running && state.data && state.data.canReplace === true &&
+    Number.isSafeInteger(state.updated) && age >= -2 && age <= 10 && Date.now() - state.receivedAt <= 10000);
+}
+
+function equipmentRequest() {
+  const item = selectedEquipmentItem();
+  const level = Number($("#equipment-level").value);
+  const slot = Number($("#equipment-slot").value);
+  if (!item || !Number.isSafeInteger(item.minLevel) || !Number.isSafeInteger(item.maxLevel) ||
+      !$("#equipment-level").value.trim() || !Number.isSafeInteger(level) ||
+      level < item.minLevel || level > item.maxLevel || !Number.isSafeInteger(slot) || slot < 1 ||
+      !equipmentSlots().some((entry) => entry.slot === slot)) return null;
+  return { kind: $("#equipment-kind").value, item: item.id, slot, level,
+    soul: item.soulSupported === true && $("#equipment-soul").checked };
+}
+
+function equipmentDuplicate(request) {
+  return request && equipmentSlots().some((slot) => slot.slot !== request.slot && slot.id === request.item);
+}
+
+function updateEquipmentAvailability() {
+  const live = equipmentLive();
+  const busy = Boolean(app.equipment.request || app.equipment.command);
+  const request = equipmentRequest();
+  const duplicate = equipmentDuplicate(request);
+  $("#equipment-fields").disabled = !live || busy;
+  $("#equipment-replace").disabled = !live || busy || !request || duplicate;
+  const reason = app.equipment.data && app.equipment.data.reason;
+  $("#equipment-availability").textContent = !live
+    ? "当前不可替换：等待游戏运行中、可替换装备且未过期的最新状态。" +
+      (typeof reason === "string" && reason ? ` 游戏报告：${reason}` : "")
+    : busy ? "替换命令处理中；可查看下方结果。"
+    : duplicate ? "所选物品已在其他同类槽位装备，不能复制或自动移动；请选择该槽位或其他物品。"
+    : "已连接当前存档；等级、物品和槽位最终由游戏内原生逻辑校验。";
+}
+
+function updateEquipmentItem(reset) {
+  const item = selectedEquipmentItem();
+  const input = $("#equipment-level");
+  const valid = item && Number.isSafeInteger(item.minLevel) && Number.isSafeInteger(item.maxLevel) &&
+    item.minLevel <= item.maxLevel;
+  input.disabled = !valid;
+  if (valid) {
+    input.min = String(item.minLevel);
+    input.max = String(item.maxLevel);
+    if (reset) input.value = String(item.minLevel);
+    $("#equipment-level-range").textContent = `原生等级 ${item.minLevel}–${item.maxLevel}（整数，可精确升降级）。`;
+  } else {
+    input.value = "";
+    input.removeAttribute("min");
+    input.removeAttribute("max");
+    $("#equipment-level-range").textContent = "选择物品后显示原生等级范围。";
+  }
+  const soulSupported = Boolean(item && item.soulSupported === true);
+  $("#equipment-soul-row").hidden = !soulSupported;
+  $("#equipment-soul").disabled = !soulSupported;
+  if (reset || !soulSupported) $("#equipment-soul").checked = false;
+  updateEquipmentAvailability();
+}
+
+function updateEquipmentSlotSummary() {
+  const slot = equipmentSlots().find((entry) => entry.slot === Number($("#equipment-slot").value));
+  $("#equipment-slot-summary").textContent = slot ? equipmentSlotLabel(slot) : "请选择要替换的槽位。";
+  updateEquipmentAvailability();
+}
+
+function equipmentSlotLabel(slot) {
+  return `槽位 ${slot.slot} · ${slot.id ? `${slot.name || slot.id} [${slot.id}] · 等级 ${slot.level} · ${slot.soul ? "已铸魂" : "未铸魂"}` : "空槽位"}`;
+}
+
+function rebuildEquipmentChoices() {
+  const state = app.equipment;
+  const items = equipmentItems();
+  const query = $("#equipment-search").value.trim().toLocaleLowerCase();
+  const catalogKey = JSON.stringify([$("#equipment-kind").value, query, items]);
+  if (state.catalogKey !== catalogKey) {
+    const select = $("#equipment-item");
+    const previous = select.value;
+    const options = [new Option("请选择物品…", "")];
+    for (const item of items) {
+      const label = `${item.name || item.id} [${item.id}]`;
+      if (!query || label.toLocaleLowerCase().includes(query)) options.push(new Option(label, item.id));
+    }
+    if (options.length === 1) options[0].textContent = query ? "没有匹配的物品" : "暂无可用物品";
+    select.replaceChildren(...options);
+    select.value = options.some((option) => option.value === previous) ? previous : "";
+    state.catalogKey = catalogKey;
+    updateEquipmentItem(select.value !== previous);
+  }
+  const slots = equipmentSlots();
+  const slotsKey = JSON.stringify([$("#equipment-kind").value, slots]);
+  if (state.slotsKey !== slotsKey) {
+    const select = $("#equipment-slot");
+    const previous = select.value;
+    select.replaceChildren(new Option(slots.length ? "请选择目标槽位…" : "暂无可用槽位", ""),
+      ...slots.map((slot) => new Option(equipmentSlotLabel(slot), String(slot.slot))));
+    select.value = slots.some((slot) => String(slot.slot) === previous) ? previous : "";
+    state.slotsKey = slotsKey;
+  }
+  updateEquipmentSlotSummary();
+}
+
+function renderEquipment(gm, profile, running) {
+  const state = app.equipment;
+  const profileId = profile ? profile.path : null;
+  if (state.profile !== profileId) {
+    const abandoned = state.command || state.request;
+    state.profile = profileId;
+    state.profileName = profile ? profile.name : null;
+    state.command = null;
+    state.request = null;
+    state.catalogKey = null;
+    state.slotsKey = null;
+    $("#equipment-kind").value = "weapons";
+    $("#equipment-search").value = "";
+    $("#equipment-item").replaceChildren(new Option("请选择物品…", ""));
+    $("#equipment-slot").replaceChildren(new Option("请选择目标槽位…", ""));
+    $("#equipment-level").value = "";
+    $("#equipment-soul").checked = false;
+    equipmentMessage(abandoned ? "存档已切换，已清除旧存档选择与命令跟踪；旧命令结果未确认，请在原存档核对。"
+      : "选择物品、精确等级和目标槽位后替换。", abandoned ? "bad" : "");
+  }
+  state.data = gm && gm.equipment;
+  state.updated = gm && gm.updated;
+  state.receivedAt = Date.now();
+  state.running = Boolean(running);
+  const pending = state.command;
+  const fresh = Number.isSafeInteger(state.updated) && Date.now() / 1000 - state.updated <= 10 &&
+    Date.now() / 1000 - state.updated >= -2 && state.running;
+  if (pending && fresh && pending.profile === profile.name && pending.path === profile.path) {
+    if (gm.appliedSeq === pending.seq) {
+      equipmentMessage(`#${pending.seq}：${gm.message || (gm.ok === true ? "装备替换成功" : "装备替换失败或结果未知")}`,
+        gm.ok === true ? "ok" : "bad");
+      state.command = null;
+    } else if (gm.appliedSeq > pending.seq || (profile.command && profile.command.seq > pending.seq)) {
+      equipmentMessage(`命令 #${pending.seq} 已被后续命令替换或覆盖，不能确认成功，请核对目标槽位。`, "bad");
+      state.command = null;
+    }
+  }
+  rebuildEquipmentChoices();
+}
+
+async function replaceEquipment() {
+  const state = app.equipment;
+  const equipment = equipmentRequest();
+  if (!equipmentLive() || state.request || state.command || !equipment || equipmentDuplicate(equipment)) {
+    updateEquipmentAvailability();
+    equipmentMessage("请等待最新可替换状态，并选择有效物品、整数等级和目标槽位；不能复制其他槽位的物品。", "bad");
+    return;
+  }
+  const request = { path: state.profile, profile: state.profileName };
+  state.request = request;
+  equipmentMessage("正在发送装备替换请求…");
+  updateEquipmentAvailability();
+  try {
+    const result = await fetchJson("/api/equipment", {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ equipment })
+    });
+    if (state.request !== request) return;
+    if (!result || result.ok !== true || !Number.isSafeInteger(result.seq) || result.profile !== request.profile) {
+      throw new Error("返回的命令或存档不匹配，不能确认替换结果；请刷新并核对存档与装备。");
+    }
+    state.command = { seq: result.seq, profile: result.profile, path: request.path };
+    equipmentMessage(`装备命令 #${result.seq} 已发送，等待当前存档处理…`);
+    setTimeout(refreshState, 400);
+  } catch (error) {
+    if (state.request === request) equipmentMessage(error.message, "bad");
+  } finally {
+    if (state.request === request) state.request = null;
+    updateEquipmentAvailability();
+  }
+}
+
+async function refreshState() {
+  if (app.polling) return;
+  app.polling = true;
+  try {
+    const payload = await fetchJson("/api/state");
+    renderState(payload);
+    await refreshLog();
+  } catch (error) {
+    $("#chips").replaceChildren(chip("无法连接控制台", "off"));
+    app.equipment.receivedAt = 0;
+    updateEquipmentAvailability();
+  } finally {
+    app.polling = false;
+  }
+}
+
+function chip(text, kind) {
+  const node = el("span", "chip" + (kind ? " " + kind : ""));
+  node.textContent = text;
+  return node;
+}
+
+async function refreshLog() {
+  try {
+    const response = await fetch("/api/log", { cache: "no-store" });
+    if (!response.ok) return;
+    const lines = await response.text();
+    const log = $("#s-log");
+    if (!lines || lines === log.dataset.text) return;
+    const nearBottom = log.scrollTop + log.clientHeight >= log.scrollHeight - 24;
+    log.dataset.text = lines;
+    log.textContent = lines;
+    if (nearBottom) log.scrollTop = log.scrollHeight;
+  } catch (error) { /* transient while the game rewrites the log */ }
+}
+
+function renderState(payload) {
+  const running = payload.game && payload.game.running;
+  const profile = payload.profile;
+  const run = profile && profile.run;
+  const gm = profile && profile.gm;
+  const chips = [];
+  chips.push(chip(running ? "游戏运行中" : "游戏未运行", running ? "ok" : "off"));
+  if (run) {
+    chips.push(chip(`第 ${run.floor} 层 · ${PHASES[run.phase] || run.phase}`));
+    if (typeof gm !== "undefined" && gm && gm.health !== undefined) chips.push(chip(`生命 ${formatNumber(gm.health)}`));
+    if (typeof gm !== "undefined" && gm && gm.balance !== undefined) chips.push(chip(`魂 ${formatNumber(gm.balance)}`));
+  }
+  $("#chips").replaceChildren(...(chips.length ? chips : [chip("等待游戏…", "off")]));
+
+  $("#s-game").textContent = running ? "运行中" : "未运行";
+  $("#s-game").style.color = running ? "var(--ok)" : "var(--muted)";
+  $("#s-profile").textContent = profile ? profile.name.slice(0, 8) + "…" : "—";
+  const state = gm || run;
+  const phase = state && state.phase ? state.phase : null;
+  $("#s-phase").textContent = phase ? (PHASES[phase] || phase) : "—";
+  const floor = state ? state.floor : null;
+  const wave = state ? state.wave : null;
+  $("#s-floor").textContent = floor !== null && floor !== undefined
+    ? `${floor} 层 / ${wave ? "第 " + wave + " 波" : "准备"}`
+    : "—";
+  $("#s-health").textContent = gm ? `${formatNumber(gm.health)} / ${formatNumber(gm.maxHealth)}` : "—";
+  $("#s-max-health-base").textContent = gm ? formatNumber(gm.maxHealthBase) : "—";
+  $("#s-attack-base").textContent = gm ? formatNumber(gm.attackBase) : "—";
+  $("#s-attack").textContent = gm ? formatNumber(gm.attack) : "—";
+  $("#s-lock-health").textContent = gm && typeof gm.lockHealth === "boolean" ? (gm.lockHealth ? "开启" : "关闭") : "—";
+  $("#s-shachi").textContent = gm ? `${formatNumber(gm.shachi)} / ${formatNumber(gm.shachiMax)}` : "—";
+  renderControls(gm, profile);
+  renderEquipment(gm, profile, running);
+  $("#s-balance").textContent = gm && gm.balance !== undefined ? formatNumber(gm.balance) : "—";
+
+  if (gm && gm.gm) {
+    const mobs = (gm.gm.mobTotal !== undefined) ? gm.gm.mobTotal : "?";
+    const bosses = (gm.gm.bossTotal !== undefined) ? gm.gm.bossTotal : "?";
+    const startLabel = { wave1: "第 1 波", wave2: "第 2 波", boss: "Boss", shop: "商店预览" }[gm.gm.start] || "";
+    $("#s-gm").textContent = `第 ${gm.gm.floor} 层 · ${startLabel} · ${mobs} 小怪 / ${bosses} Boss`;
+  } else {
+    $("#s-gm").textContent = "未加载";
+  }
+
+  const queuedSeq = profile && profile.command ? profile.command.seq : 0;
+  const appliedSeq = gm && gm.appliedSeq ? gm.appliedSeq : 0;
+  const seq = Math.max(queuedSeq, appliedSeq);
+  $("#s-command").textContent = seq ? `#${seq}` : "—";
+  const message = $("#s-message");
+  if (queuedSeq > appliedSeq) {
+    message.textContent = `命令 #${queuedSeq} 已写入，等待游戏读取…`;
+    message.className = "status-message";
+  } else if (gm && gm.message) {
+    message.textContent = gm.message;
+    message.className = "status-message " + (gm.ok === false ? "bad" : "ok");
+  } else if (profile && profile.command) {
+    message.textContent = `命令 #${profile.command.seq} 已写入，等待游戏读取…`;
+    message.className = "status-message";
+  } else {
+    message.textContent = "尚未发送 GM 指令。";
+    message.className = "status-message";
+  }
+
+  const launch = $("#launch");
+  if (launch) launch.disabled = Boolean(running);
+  app.lastState = state;
+  app.lastPhase = phase;
+}
+
+async function loadScenario() {
+  const scenario = collectScenario();
+  if (scenario.error) {
+    showFormMessage(scenario.error, "bad");
+    return;
+  }
+  if (scenario.allZero) {
+    showFormMessage("商店权重全为 0：本层商店不会出现随机商品，只保留固定服务。", "bad");
+  }
+  $("#load").disabled = true;
+  try {
+    const result = await fetchJson("/api/apply", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ scenario })
+    });
+    showFormMessage(`命令 #${result.seq} 已发送，等待游戏加载自定义楼层…`, "ok");
+    setTimeout(refreshState, 400);
+  } catch (error) {
+    showFormMessage(error.message, "bad");
+  } finally {
+    $("#load").disabled = false;
+  }
+}
+
+async function launchGame() {
+  $("#launch").disabled = true;
+  showFormMessage("正在启动独立爬塔实例…", "ok");
+  try {
+    await fetchJson("/api/launch", { method: "POST" });
+    showFormMessage("启动命令已发送。请等待游戏窗口出现；进入模式后本页会自动连接。", "ok");
+  } catch (error) {
+    showFormMessage(error.message, "bad");
+    $("#launch").disabled = false;
+  }
+}
+
+async function init() {
+  try {
+    app.catalog = await fetchJson("/api/catalog");
+  } catch (error) {
+    showFormMessage("无法读取敌人目录：" + error.message, "bad");
+    return;
+  }
+  buildCatalogIndex();
+  buildWaveEditors();
+  buildShopEditors();
+  let draft = null;
+  try { draft = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null"); } catch (error) { draft = null; }
+  applyDraft(draft || defaultScenario());
+  if (!draft || !draft.shop) setShopWeights(app.catalog.shop.weights);
+
+  $("#floor").addEventListener("input", saveDraft);
+  $("#start").addEventListener("change", saveDraft);
+  $("#use-current").addEventListener("click", () => {
+    const floor = app.lastState && app.lastState.floor;
+    if (typeof floor === "number") {
+      $("#floor").value = String(floor);
+      saveDraft();
+    } else {
+      showFormMessage("尚未读取到当前层数。", "bad");
+    }
+  });
+  $("#reset-form").addEventListener("click", () => {
+    localStorage.removeItem(DRAFT_KEY);
+    applyDraft(defaultScenario());
+    setShopWeights(app.catalog.shop.weights);
+    showFormMessage("表单已重置为默认配置。", "ok");
+  });
+  $("#load").addEventListener("click", loadScenario);
+  $("#launch").addEventListener("click", launchGame);
+  $("#refresh").addEventListener("click", refreshState);
+  for (const input of document.querySelectorAll("[data-control]")) {
+    input.addEventListener("input", () => { input.dataset.dirty = "true"; });
+  }
+  for (const button of document.querySelectorAll("[data-apply-control]")) {
+    button.addEventListener("click", () => applyControl(button));
+  }
+  $("#equipment-kind").addEventListener("change", () => {
+    $("#equipment-search").value = "";
+    $("#equipment-item").value = "";
+    $("#equipment-slot").value = "";
+    rebuildEquipmentChoices();
+    updateEquipmentItem(true);
+  });
+  $("#equipment-search").addEventListener("input", rebuildEquipmentChoices);
+  $("#equipment-item").addEventListener("change", () => updateEquipmentItem(true));
+  $("#equipment-level").addEventListener("input", updateEquipmentAvailability);
+  $("#equipment-soul").addEventListener("change", updateEquipmentAvailability);
+  $("#equipment-slot").addEventListener("change", updateEquipmentSlotSummary);
+  $("#equipment-replace").addEventListener("click", replaceEquipment);
+  setInterval(updateEquipmentAvailability, 1000);
+  document.addEventListener("keydown", (event) => {
+    if ((event.ctrlKey || event.metaKey) && event.key === "Enter") loadScenario();
+  });
+
+  await refreshState();
+  setInterval(refreshState, 1500);
+}
+
+init();
+</script>
+</body>
+</html>

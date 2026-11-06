@@ -1,0 +1,1561 @@
+{
+  "tiers": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+  ],
+  "progress": {
+    "mobs": [
+      {
+        "firstFloor": 1,
+        "probabilities": {
+          "T1": 40,
+          "T2": 50,
+          "T3": 10,
+          "T4": 0,
+          "T5": 0
+        },
+        "lastFloor": 3,
+        "waves": [
+          {
+            "minimum": 4,
+            "maximum": 4
+          },
+          {
+            "minimum": 4,
+            "maximum": 6
+          }
+        ]
+      },
+      {
+        "firstFloor": 4,
+        "probabilities": {
+          "T1": 20,
+          "T2": 30,
+          "T3": 30,
+          "T4": 20,
+          "T5": 0
+        },
+        "lastFloor": 5,
+        "waves": [
+          {
+            "minimum": 5,
+            "maximum": 5
+          },
+          {
+            "minimum": 5,
+            "maximum": 7
+          }
+        ]
+      },
+      {
+        "firstFloor": 6,
+        "probabilities": {
+          "T1": 0,
+          "T2": 20,
+          "T3": 30,
+          "T4": 30,
+          "T5": 20
+        },
+        "lastFloor": 10,
+        "waves": [
+          {
+            "minimum": 5,
+            "maximum": 6
+          },
+          {
+            "minimum": 6,
+            "maximum": 8
+          }
+        ]
+      },
+      {
+        "firstFloor": 11,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 20,
+          "T4": 50,
+          "T5": 30
+        },
+        "lastFloor": 15,
+        "waves": [
+          {
+            "minimum": 5,
+            "maximum": 6
+          },
+          {
+            "minimum": 6,
+            "maximum": 8
+          }
+        ]
+      },
+      {
+        "firstFloor": 16,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 20,
+          "T4": 30,
+          "T5": 50
+        },
+        "waves": [
+          {
+            "minimum": 6,
+            "maximum": 6
+          },
+          {
+            "minimum": 6,
+            "maximum": 8
+          }
+        ]
+      }
+    ],
+    "bosses": [
+      {
+        "firstFloor": 1,
+        "probabilities": {
+          "T1": 50,
+          "T2": 50,
+          "T3": 0,
+          "T4": 0,
+          "T5": 0
+        },
+        "lastFloor": 3,
+        "waves": [
+          {
+            "minimum": 1,
+            "maximum": 1
+          }
+        ]
+      },
+      {
+        "firstFloor": 4,
+        "probabilities": {
+          "T1": 0,
+          "T2": 50,
+          "T3": 50,
+          "T4": 0,
+          "T5": 0
+        },
+        "lastFloor": 5,
+        "waves": [
+          {
+            "minimum": 1,
+            "maximum": 1
+          }
+        ]
+      },
+      {
+        "firstFloor": 6,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 50,
+          "T4": 50,
+          "T5": 0
+        },
+        "lastFloor": 10,
+        "waves": [
+          {
+            "minimum": 1,
+            "maximum": 1
+          }
+        ]
+      },
+      {
+        "firstFloor": 11,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 25,
+          "T4": 50,
+          "T5": 25
+        },
+        "lastFloor": 15,
+        "waves": [
+          {
+            "minimum": 1,
+            "maximum": 2
+          }
+        ]
+      },
+      {
+        "firstFloor": 16,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 20,
+          "T4": 40,
+          "T5": 40
+        },
+        "waves": [
+          {
+            "minimum": 1,
+            "maximum": 2
+          }
+        ]
+      }
+    ],
+    "weapons": [
+      {
+        "firstFloor": 0,
+        "probabilities": {
+          "T1": 50,
+          "T2": 50,
+          "T3": 0,
+          "T4": 0,
+          "T5": 0
+        },
+        "lastFloor": 0
+      },
+      {
+        "firstFloor": 1,
+        "probabilities": {
+          "T1": 25,
+          "T2": 30,
+          "T3": 20,
+          "T4": 15,
+          "T5": 10
+        },
+        "lastFloor": 3
+      },
+      {
+        "firstFloor": 4,
+        "probabilities": {
+          "T1": 0,
+          "T2": 30,
+          "T3": 30,
+          "T4": 25,
+          "T5": 15
+        },
+        "lastFloor": 5
+      },
+      {
+        "firstFloor": 6,
+        "probabilities": {
+          "T1": 0,
+          "T2": 10,
+          "T3": 30,
+          "T4": 30,
+          "T5": 30
+        },
+        "lastFloor": 10
+      },
+      {
+        "firstFloor": 11,
+        "probabilities": {
+          "T1": 0,
+          "T2": 10,
+          "T3": 10,
+          "T4": 50,
+          "T5": 30
+        },
+        "lastFloor": 15
+      },
+      {
+        "firstFloor": 16,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 0,
+          "T4": 50,
+          "T5": 50
+        }
+      }
+    ],
+    "shadow": [
+      {
+        "firstFloor": 0,
+        "probabilities": {
+          "T1": 50,
+          "T2": 50,
+          "T3": 0,
+          "T4": 0,
+          "T5": 0
+        },
+        "lastFloor": 0
+      },
+      {
+        "firstFloor": 1,
+        "probabilities": {
+          "T1": 25,
+          "T2": 30,
+          "T3": 20,
+          "T4": 15,
+          "T5": 10
+        },
+        "lastFloor": 3
+      },
+      {
+        "firstFloor": 4,
+        "probabilities": {
+          "T1": 0,
+          "T2": 30,
+          "T3": 30,
+          "T4": 25,
+          "T5": 15
+        },
+        "lastFloor": 5
+      },
+      {
+        "firstFloor": 6,
+        "probabilities": {
+          "T1": 0,
+          "T2": 10,
+          "T3": 30,
+          "T4": 30,
+          "T5": 30
+        },
+        "lastFloor": 10
+      },
+      {
+        "firstFloor": 11,
+        "probabilities": {
+          "T1": 0,
+          "T2": 10,
+          "T3": 10,
+          "T4": 50,
+          "T5": 30
+        },
+        "lastFloor": 15
+      },
+      {
+        "firstFloor": 16,
+        "probabilities": {
+          "T1": 0,
+          "T2": 0,
+          "T3": 0,
+          "T4": 50,
+          "T5": 50
+        }
+      }
+    ]
+  },
+  "items": {
+    "weapons": {
+      "Tang": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 60000
+      },
+      "IronBlade": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "Double": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 60000
+      },
+      "Long": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 60000
+      },
+      "GuiTouBlade": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "ChiZheCanJian": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "ZhanMaBlade": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "4": 15000,
+          "7": 20000,
+          "10": 20000,
+          "13": 25000,
+          "16": 25000,
+          "19": 25000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 30000
+      },
+      "SnakeDual": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "RenOuQingTongJian": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "DualHook": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "4": 15000,
+          "7": 20000,
+          "10": 20000,
+          "13": 25000,
+          "16": 25000,
+          "19": 25000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 30000
+      },
+      "TianShaShuangYue": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "4": 15000,
+          "7": 20000,
+          "10": 20000,
+          "13": 25000,
+          "16": 25000,
+          "19": 25000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 30000
+      },
+      "PoJun": {
+        "buy": 20000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "4": 20000,
+          "7": 25000,
+          "10": 25000,
+          "13": 25000,
+          "16": 30000,
+          "19": 30000,
+          "22": 40000,
+          "25": 40000,
+          "28": 40000,
+          "30": 40000
+        },
+        "soul": 40000
+      },
+      "SlitheringSword": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "4": 15000,
+          "7": 20000,
+          "10": 20000,
+          "13": 25000,
+          "16": 25000,
+          "19": 25000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 30000
+      },
+      "BaiShanShuangJian": {
+        "buy": 20000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "4": 20000,
+          "7": 25000,
+          "10": 25000,
+          "13": 25000,
+          "16": 30000,
+          "19": 30000,
+          "22": 40000,
+          "25": 40000,
+          "28": 40000,
+          "30": 40000
+        },
+        "soul": 40000
+      },
+      "HorizontalBlade": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "4": 15000,
+          "7": 20000,
+          "10": 20000,
+          "13": 25000,
+          "16": 25000,
+          "19": 25000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 30000
+      },
+      "JadeDualChakram": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "4": 10000,
+          "7": 15000,
+          "10": 15000,
+          "13": 20000,
+          "16": 20000,
+          "19": 20000,
+          "22": 30000,
+          "25": 30000,
+          "28": 30000,
+          "30": 30000
+        },
+        "soul": 20000
+      },
+      "YuuBlade": {
+        "buy": 25000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "4": 25000,
+          "7": 30000,
+          "10": 30000,
+          "13": 40000,
+          "16": 40000,
+          "19": 40000,
+          "22": 50000,
+          "25": 50000,
+          "28": 50000,
+          "30": 50000
+        },
+        "soul": 50000
+      },
+      "Jigsaw": {
+        "buy": 20000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "4": 20000,
+          "7": 25000,
+          "10": 25000,
+          "13": 25000,
+          "16": 30000,
+          "19": 30000,
+          "22": 40000,
+          "25": 40000,
+          "28": 40000,
+          "30": 40000
+        },
+        "soul": 40000
+      },
+      "RenOuYanYueDao": {
+        "buy": 20000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "4": 20000,
+          "7": 25000,
+          "10": 25000,
+          "13": 25000,
+          "16": 30000,
+          "19": 30000,
+          "22": 40000,
+          "25": 40000,
+          "28": 40000,
+          "30": 40000
+        },
+        "soul": 40000
+      },
+      "CiGuHunDun": {
+        "buy": 25000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "4": 25000,
+          "7": 30000,
+          "10": 30000,
+          "13": 40000,
+          "16": 40000,
+          "19": 40000,
+          "22": 50000,
+          "25": 50000,
+          "28": 50000,
+          "30": 50000
+        },
+        "soul": 50000
+      },
+      "BaiYing": {
+        "buy": 25000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "4": 25000,
+          "7": 30000,
+          "10": 30000,
+          "13": 40000,
+          "16": 40000,
+          "19": 40000,
+          "22": 50000,
+          "25": 50000,
+          "28": 50000,
+          "30": 50000
+        },
+        "soul": 50000
+      },
+      "FangHuaXieShan": {
+        "buy": 20000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "4": 20000,
+          "7": 25000,
+          "10": 25000,
+          "13": 25000,
+          "16": 30000,
+          "19": 30000,
+          "22": 40000,
+          "25": 40000,
+          "28": 40000,
+          "30": 40000
+        },
+        "soul": 40000
+      },
+      "ZiMingJian": {
+        "buy": 25000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "4": 25000,
+          "7": 30000,
+          "10": 30000,
+          "13": 40000,
+          "16": 40000,
+          "19": 40000,
+          "22": 50000,
+          "25": 50000,
+          "28": 50000,
+          "30": 50000
+        },
+        "soul": 50000
+      },
+      "LuanYing": {
+        "buy": 25000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "4": 25000,
+          "7": 30000,
+          "10": 30000,
+          "13": 40000,
+          "16": 40000,
+          "19": 40000,
+          "22": 50000,
+          "25": 50000,
+          "28": 50000,
+          "30": 50000
+        },
+        "soul": 50000
+      }
+    },
+    "shadow": {
+      "BrutalAxe": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "UnnamedBow": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T1",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "ShachiHook": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "MiaoShouFeiDao": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "5": 15000,
+          "10": 15000,
+          "15": 20000,
+          "20": 20000,
+          "25": 25000,
+          "30": 25000
+        },
+        "soul": 20000
+      },
+      "TieGongZhuQuanTao": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "ZhuoBiDun": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "KuYeSiZhuChuan": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "CaoOuSiXian": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "CuiXinPiPa": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "HuoLiuXing": {
+        "buy": 5000,
+        "weight": 1,
+        "tier": "T2",
+        "upgrade": {
+          "5": 5000,
+          "10": 10000,
+          "15": 10000,
+          "20": 15000,
+          "25": 15000,
+          "30": 15000
+        },
+        "soul": 10000
+      },
+      "LionHead": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "XuKongHuaShan": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "5": 15000,
+          "10": 15000,
+          "15": 20000,
+          "20": 20000,
+          "25": 25000,
+          "30": 25000
+        },
+        "soul": 20000
+      },
+      "JinGua": {
+        "buy": 15000,
+        "weight": 1,
+        "tier": "T5",
+        "upgrade": {
+          "5": 15000,
+          "10": 15000,
+          "15": 20000,
+          "20": 20000,
+          "25": 25000,
+          "30": 25000
+        },
+        "soul": 20000
+      },
+      "JianKeZhaoJiLing": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "DuYanGong": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "YouLongCha": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "YouLongTou": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "HuangJinHuoChong": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      },
+      "Mojian": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      },
+      "TanLang": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      },
+      "XueDiZi": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      },
+      "ThunderSpear": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      },
+      "NiTouChe": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T3",
+        "upgrade": {
+          "5": 10000,
+          "10": 15000,
+          "15": 15000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 10000
+      },
+      "TigerCannon": {
+        "buy": 10000,
+        "weight": 1,
+        "tier": "T4",
+        "upgrade": {
+          "5": 15000,
+          "10": 20000,
+          "15": 20000,
+          "20": 20000,
+          "25": 20000,
+          "30": 20000
+        },
+        "soul": 15000
+      }
+    },
+    "medicine": {
+      "Hulu": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "GuiShen": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "RongQi": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "NingFengDan": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "Medicine_Duration": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "Medicine_Recover": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "Medicine_ResistanceElement": {
+        "buy": 5000,
+        "upgrade": 10000
+      },
+      "Medicine_Interrupt": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_ShachiAttack": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_AdditionalRecover": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "KuYe": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "FeiJiu": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_Ghost": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_Element": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_UltimateCharge": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "JinJiHeJi": {
+        "buy": 10000,
+        "upgrade": 20000
+      },
+      "Medicine_Attack": {
+        "buy": 10000,
+        "upgrade": 20000
+      }
+    },
+    "accessory": {
+      "AC_Loot": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_SummonDuration": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_PerfectFrame": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BreakRegen": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Execution": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Health": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Shachi": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ShachiRegen": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ShachiCool": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BreakRecover": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_UltimateCharge": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_SpiritShadow": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Attack": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ShachiAttack": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Stealth": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ExecutionSwitchCool": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Stance": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Deflect": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_HeavyAttackCost": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_HeavyAttackDamage": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_HeavyAttackShachi": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_EvadePhantom": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_SwitchEndure": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_UltimateBreak": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Double": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Long": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Tang": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_LowShachi": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_LowHealth": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Combo": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_AnimMovement": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ActHit": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Counter": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Ranged": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Elemental": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Control": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_HealthResistance": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_TimerEndure": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BigHit": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BreakAttack": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistNonBreak": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Rider": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BreakShield": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistRanged": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ShachiWeapon": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_MagicWeapon": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_PowerWeapon": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_RangedWeapon": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_MartialWeapon": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ElementRegen": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Ignite": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Electrified": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Frost": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Bleed": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Poison": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistFire": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistThunder": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistIce": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistBleed": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_ResistPoison": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Chaos": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_Drink": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_RandomDrink": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_DrinkCost": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_BreakDrink": {
+        "buy": 10000,
+        "upgrade": 10000
+      },
+      "AC_PoisonRegen": {
+        "buy": 10000,
+        "upgrade": 10000
+      }
+    },
+    "excluded": {
+      "accessory": {
+        "AC_ActHitShachi": "禁用：空名称键",
+        "AC_Summon": "禁用：空名称键",
+        "AC_Regen": "禁用：空名称键",
+        "AC_Resistance": "禁用：空名称键",
+        "AC_PhysicalResistance": "禁用：空名称键",
+        "AC_ElementalResistance": "禁用：空名称键",
+        "AC_EasyExecution": "禁用：空名称键"
+      }
+    }
+  },
+  "fixed": {
+    "health": [
+      5000,
+      5000,
+      10000,
+      10000,
+      10000,
+      15000,
+      15000,
+      15000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000
+    ],
+    "attack": [
+      10000,
+      10000,
+      10000,
+      10000,
+      20000,
+      20000,
+      25000,
+      25000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000,
+      30000
+    ],
+    "shachi": [
+      5000,
+      5000,
+      10000,
+      10000,
+      10000,
+      15000,
+      15000,
+      15000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000,
+      20000
+    ]
+  },
+  "heartPrices": [0, 10000, 10000, 20000, 20000, 20000, 20000, 20000],
+  "skills": {
+    "HeiShi1": 0,
+    "HeiShi2": 5000,
+    "HeiShi3": 10000,
+    "HeiShi4": 15000,
+    "HeiShi5": 20000,
+    "HeiShi6": 30000,
+    "HeiShi7": 40000,
+    "HeiShi8": 20000,
+    "ShaChiHuPo1": 5000,
+    "ShaChiHuPo2": 5000,
+    "ShaChiHuPo3": 10000,
+    "ShaChiHuPo4": 15000,
+    "ShaChiHuPo5": 20000,
+    "ShaChiHuPo6": 30000,
+    "ShaChiHuPo7": 40000,
+    "ShaChiHuPo8": 20000,
+    "MemoryFlower1": 5000,
+    "MemoryFlower2": 5000,
+    "MemoryFlower3": 10000,
+    "MemoryFlower4": 15000,
+    "MemoryFlower5": 20000,
+    "MemoryFlower6": 30000,
+    "MemoryFlower7": 40000,
+    "MemoryFlower8": 20000,
+    "TopRongShuZhiXin1": 5000,
+    "TopRongShuZhiXin2": 15000,
+    "TopRongShuZhiXin3": 20000,
+    "TopRongShuZhiXin4": 30000,
+    "BottomRongShuZhiXin1": 10000,
+    "BottomRongShuZhiXin2": 20000,
+    "BottomRongShuZhiXin3": 30000,
+    "BottomRongShuZhiXin4": 40000
+  }
+}

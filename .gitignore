@@ -1,0 +1,49 @@
+.local/
+
+# Publish source, configuration and tooling only.
+/*
+!/.gitignore
+!/LICENSE
+!/src/
+!/config/
+!/tools/
+
+# Exclude these directories at every depth.
+media/
+docs/
+ui/
+dist/
+
+# Local credentials, build outputs and caches.
+.env
+.env.*
+bin/
+obj/
+.vs/
+__pycache__/
+*.py[cod]
+*.user
+*.suo
+*.log
+
+# Game assets, binary packages and media are distributed separately.
+*.pak
+*.utoc
+*.ucas
+*.uasset
+*.umap
+*.dll
+*.exe
+*.pdb
+*.zip
+*.7z
+*.rar
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.mp4
+*.wav
+*.mp3

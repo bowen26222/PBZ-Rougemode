@@ -1,0 +1,20 @@
+{
+  "weights": {
+    "weapons": {
+      "upgrade": 5,
+      "replace": 4,
+      "soul": 1
+    },
+    "shadow": {
+      "upgrade": 5,
+      "replace": 4,
+      "soul": 1
+    },
+    "supplies": {
+      "accessory_replace": 3,
+      "medicine_replace": 3,
+      "accessory_upgrade": 2,
+      "medicine_upgrade": 2
+    }
+  }
+}
